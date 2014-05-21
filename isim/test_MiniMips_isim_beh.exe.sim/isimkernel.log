@@ -2,9 +2,9 @@ Command line:
    test_MiniMips_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49763
+     -socket  49811
 
-Wed May 21 11:03:06 2014
+Wed May 21 12:16:07 2014
 
 
- Elaboration Time: 0.1092 sec
+ Elaboration Time: 0.078 sec

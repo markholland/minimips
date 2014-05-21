@@ -10,3 +10,93 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
 bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 
+par -w -intstyle ise -ol high -mt off MiniMips_map.ncd MiniMips.ncd MiniMips.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips.twx MiniMips.ncd -o MiniMips.twr MiniMips.pcf -ucf MiniMips.ucf 
+bitgen -intstyle ise -f MiniMips.ut MiniMips.ncd 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p xc6slx16-csg324-3 "MiniMips.ngc" MiniMips.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_map.ncd MiniMips.ngd MiniMips.pcf 

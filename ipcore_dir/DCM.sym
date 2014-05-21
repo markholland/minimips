@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="DCM">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2014-5-20T10:9:59</timestamp>
+    <timestamp>2014-5-21T11:14:43</timestamp>
     <pin polarity="Input" x="0" y="80" name="clk_in1" />
     <pin polarity="Input" x="0" y="432" name="reset" />
     <pin polarity="Output" x="608" y="80" name="clk_out1" />

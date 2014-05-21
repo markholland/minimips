@@ -1,0 +1,969 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: MiniMips_BRAM.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MiniMips_BRAM.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MiniMips_BRAM"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : MiniMips_BRAM
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ipcore_dir\memory_BRAM.vhd" into library work
+Parsing entity <memory_BRAM>.
+Parsing architecture <memory_BRAM_a> of entity <memory_bram>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ShiftRegister2.vhd" into library work
+Parsing entity <ShiftRegister2>.
+Parsing architecture <Comportamental> of entity <shiftregister2>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Registers.vhd" into library work
+Parsing entity <Registers>.
+Parsing architecture <Behavioral> of entity <registers>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\PC.vhd" into library work
+Parsing entity <PC>.
+Parsing architecture <Behavioral> of entity <pc>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MyBuffer.vhd" into library work
+Parsing entity <MyBuffer>.
+Parsing architecture <Behavioral> of entity <mybuffer>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer4.vhd" into library work
+Parsing entity <Multiplexer4>.
+Parsing architecture <Structural> of entity <multiplexer4>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd" into library work
+Parsing entity <Multiplexer2>.
+Parsing architecture <BehavioralV1> of entity <multiplexer2>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MemDataReg.vhd" into library work
+Parsing entity <MemDataReg>.
+Parsing architecture <Behavioral> of entity <memdatareg>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Instr_Register.vhd" into library work
+Parsing entity <Instr_Register>.
+Parsing architecture <Behavioral> of entity <instr_register>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\DisplaysManager.vhd" into library work
+Parsing entity <DisplaysManager>.
+Parsing architecture <Behavioral> of entity <displaysmanager>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Display7Segments.vhd" into library work
+Parsing entity <Display7Segments>.
+Parsing architecture <Behavioral> of entity <display7segments>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Control_BRAM.vhd" into library work
+Parsing entity <Control_BRAM>.
+Parsing architecture <Comportamental> of entity <control_bram>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ClockDivisorN.vhd" into library work
+Parsing entity <ClockDivisorN>.
+Parsing architecture <Behavioral> of entity <clockdivisorn>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ALUControl.vhd" into library work
+Parsing entity <ALUControl>.
+Parsing architecture <Behavioral> of entity <alucontrol>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" into library work
+Parsing entity <MiniMips_BRAM>.
+Parsing architecture <Structural> of entity <minimips_bram>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <MiniMips_BRAM> (architecture <Structural>) from library <work>.
+
+Elaborating entity <PC> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Multiplexer2> (architecture <BehavioralV1>) with generics from library <work>.
+INFO:HDLCompiler:679 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd" Line 32. Case statement is complete. others clause is never selected
+
+Elaborating entity <memory_BRAM> (architecture <memory_BRAM_a>) from library <work>.
+
+Elaborating entity <MemDataReg> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Instr_Register> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Multiplexer2> (architecture <BehavioralV1>) with generics from library <work>.
+INFO:HDLCompiler:679 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd" Line 32. Case statement is complete. others clause is never selected
+
+Elaborating entity <Registers> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <MyBuffer> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Multiplexer4> (architecture <Structural>) with generics from library <work>.
+INFO:HDLCompiler:679 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer4.vhd" Line 39. Case statement is complete. others clause is never selected
+
+Elaborating entity <ALUControl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ShiftRegister2> (architecture <Comportamental>) from library <work>.
+
+Elaborating entity <Control_BRAM> (architecture <Comportamental>) from library <work>.
+
+Elaborating entity <DisplaysManager> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\DisplaysManager.vhd" Line 53: b_i should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\DisplaysManager.vhd" Line 56: c_i should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\DisplaysManager.vhd" Line 59: d_i should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\DisplaysManager.vhd" Line 62: a_i should be on the sensitivity list of the process
+
+Elaborating entity <Display7Segments> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ClockDivisorN> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ClockDivisorN> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ClockDivisorN> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:634 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 235: Net <auxPort0[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 236: Net <auxPort1[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 237: Net <auxPort2[3]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MiniMips_BRAM>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd".
+INFO:Xst:3210 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" line 412: Output port <MemRead> of the instance <inst_control> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <auxPort0<3:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <auxPort1<3:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <auxPort2<3:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <MiniMips_BRAM> synthesized.
+
+Synthesizing Unit <PC>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\PC.vhd".
+    Found 8-bit register for signal <actual>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <PC> synthesized.
+
+Synthesizing Unit <Multiplexer2_1>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd".
+        WIDTH = 8
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Multiplexer2_1> synthesized.
+
+Synthesizing Unit <MemDataReg>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MemDataReg.vhd".
+    Found 8-bit register for signal <aux>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <MemDataReg> synthesized.
+
+Synthesizing Unit <Instr_Register>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Instr_Register.vhd".
+    Found 5-bit register for signal <aux2>.
+    Found 5-bit register for signal <aux3>.
+    Found 6-bit register for signal <aux4>.
+    Found 16-bit register for signal <aux1>.
+    Found 8-bit register for signal <input0>.
+    Found 8-bit register for signal <input1>.
+    Found 8-bit register for signal <input2>.
+    Summary:
+	inferred  56 D-type flip-flop(s).
+Unit <Instr_Register> synthesized.
+
+Synthesizing Unit <Multiplexer2_2>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd".
+        WIDTH = 5
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Multiplexer2_2> synthesized.
+
+Synthesizing Unit <Registers>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Registers.vhd".
+    Found 8-bit register for signal <register1>.
+    Found 8-bit register for signal <register2>.
+    Found 8-bit register for signal <register3>.
+    Found 8-bit register for signal <register4>.
+    Found 8-bit register for signal <register5>.
+    Found 8-bit register for signal <register6>.
+    Found 8-bit register for signal <register7>.
+    Found 8-bit register for signal <register0>.
+    Found 8-bit register for signal <ReadRegister1[4]_dff_26_OUT>.
+    Found 8-bit register for signal <ReadRegister2[4]_dff_28_OUT>.
+    Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_36>.
+    Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_37>.
+    Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_38>.
+    Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_39>.
+    Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_40>.
+    Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_41>.
+    Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_42>.
+    Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_43>.
+    Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_44>.
+    Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_45>.
+    Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_46>.
+    Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_47>.
+    Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_48>.
+    Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_49>.
+    Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_50>.
+    Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_51>.
+    Found 32x1-bit Read Only RAM for signal <ReadRegister1[4]_GND_12_o_Mux_31_o>
+    Found 32x1-bit Read Only RAM for signal <ReadRegister2[4]_GND_28_o_Mux_47_o>
+    Found 8-bit 8-to-1 multiplexer for signal <_n0196> created at line 92.
+    Found 8-bit 8-to-1 multiplexer for signal <_n0192> created at line 113.
+    Found 1-bit tristate buffer for signal <ReadData1<7>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData1<6>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData1<5>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData1<4>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData1<3>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData1<2>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData1<1>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData1<0>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData2<7>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData2<6>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData2<5>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData2<4>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData2<3>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData2<2>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData2<1>> created at line 57
+    Found 1-bit tristate buffer for signal <ReadData2<0>> created at line 57
+    Summary:
+	inferred   2 RAM(s).
+	inferred  96 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <Registers> synthesized.
+
+Synthesizing Unit <MyBuffer>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MyBuffer.vhd".
+    Found 8-bit register for signal <aux>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <MyBuffer> synthesized.
+
+Synthesizing Unit <Multiplexer4>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer4.vhd".
+        WIDTH = 8
+    Found 8-bit 4-to-1 multiplexer for signal <y_o> created at line 30.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Multiplexer4> synthesized.
+
+Synthesizing Unit <ALUControl>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ALUControl.vhd".
+    Summary:
+	no macro.
+Unit <ALUControl> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ALU.vhd".
+    Found 8-bit adder for signal <ALUSrcA[7]_ALUSrcB[7]_add_0_OUT> created at line 55.
+    Found 8-bit subtractor for signal <ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>> created at line 58.
+    Found 8-bit 7-to-1 multiplexer for signal <auxresult> created at line 53.
+    Found 8-bit comparator greater for signal <ALUSrcB[7]_ALUSrcA[7]_LessThan_7_o> created at line 67
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  11 Multiplexer(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <ShiftRegister2>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ShiftRegister2.vhd".
+    Found 8-bit register for signal <bit_o>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <ShiftRegister2> synthesized.
+
+Synthesizing Unit <Control_BRAM>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Control_BRAM.vhd".
+    Found 4-bit register for signal <estado_actual>.
+    Found finite state machine <FSM_0> for signal <estado_actual>.
+    -----------------------------------------------------------------------
+    | States             | 14                                             |
+    | Transitions        | 37                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 18                                             |
+    | Clock              | clk_i (rising_edge)                            |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | estado0                                        |
+    | Power Up State     | estado0                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <Control_BRAM> synthesized.
+
+Synthesizing Unit <DisplaysManager>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\DisplaysManager.vhd".
+    Found 2-bit register for signal <currentDisplay>.
+    Found finite state machine <FSM_1> for signal <currentDisplay>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk_i (rising_edge)                            |
+    | Reset              | rst_i (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | display0                                       |
+    | Power Up State     | display0                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <DisplaysManager> synthesized.
+
+Synthesizing Unit <Display7Segments>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Display7Segments.vhd".
+    Found 16x7-bit Read Only RAM for signal <leds_n_o>
+    Summary:
+	inferred   1 RAM(s).
+Unit <Display7Segments> synthesized.
+
+Synthesizing Unit <ClockDivisorN_1>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ClockDivisorN.vhd".
+        DIVIDE = 2
+    Found 1-bit register for signal <clk_div_o>.
+    Found 1-bit register for signal <count>.
+    Found 1-bit adder for signal <count[0]_PWR_56_o_add_1_OUT<0>> created at line 51.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <ClockDivisorN_1> synthesized.
+
+Synthesizing Unit <ClockDivisorN_2>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ClockDivisorN.vhd".
+        DIVIDE = 500000
+    Found 1-bit register for signal <clk_div_o>.
+    Found 19-bit register for signal <count>.
+    Found 19-bit adder for signal <count[18]_GND_74_o_add_1_OUT> created at line 51.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+Unit <ClockDivisorN_2> synthesized.
+
+Synthesizing Unit <ClockDivisorN_3>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ClockDivisorN.vhd".
+        DIVIDE = 2500
+    Found 1-bit register for signal <clk_div_o>.
+    Found 12-bit register for signal <count>.
+    Found 12-bit adder for signal <count[11]_GND_75_o_add_1_OUT> created at line 51.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+Unit <ClockDivisorN_3> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x7-bit single-port Read Only RAM                    : 1
+ 32x1-bit single-port Read Only RAM                    : 2
+# Adders/Subtractors                                   : 5
+ 1-bit adder                                           : 1
+ 12-bit adder                                          : 1
+ 19-bit adder                                          : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 45
+ 1-bit register                                        : 20
+ 12-bit register                                       : 1
+ 16-bit register                                       : 1
+ 19-bit register                                       : 1
+ 5-bit register                                        : 2
+ 6-bit register                                        : 1
+ 8-bit register                                        : 19
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 21
+ 1-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 13
+ 8-bit 4-to-1 multiplexer                              : 2
+ 8-bit 8-to-1 multiplexer                              : 2
+# Tristates                                            : 16
+ 1-bit tristate buffer                                 : 16
+# FSMs                                                 : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/memory_BRAM.ngc>.
+Loading core <memory_BRAM> for timing and area information for instance <inst_memory>.
+INFO:Xst:2261 - The FF/Latch <ReadRegister1[4]_clk_i_DFF_37> in Unit <inst_Registers> is equivalent to the following 7 FFs/Latches, which will be removed : <ReadRegister1[4]_clk_i_DFF_36> <ReadRegister1[4]_clk_i_DFF_40> <ReadRegister1[4]_clk_i_DFF_38> <ReadRegister1[4]_clk_i_DFF_39> <ReadRegister1[4]_clk_i_DFF_43> <ReadRegister1[4]_clk_i_DFF_41> <ReadRegister1[4]_clk_i_DFF_42> 
+INFO:Xst:2261 - The FF/Latch <ReadRegister2[4]_clk_i_DFF_46> in Unit <inst_Registers> is equivalent to the following 7 FFs/Latches, which will be removed : <ReadRegister2[4]_clk_i_DFF_44> <ReadRegister2[4]_clk_i_DFF_45> <ReadRegister2[4]_clk_i_DFF_49> <ReadRegister2[4]_clk_i_DFF_47> <ReadRegister2[4]_clk_i_DFF_48> <ReadRegister2[4]_clk_i_DFF_50> <ReadRegister2[4]_clk_i_DFF_51> 
+INFO:Xst:2261 - The FF/Latch <bit_o_0> in Unit <inst_ShiftLeft2> is equivalent to the following FF/Latch, which will be removed : <bit_o_1> 
+WARNING:Xst:1710 - FF/Latch <bit_o_0> (without init value) has a constant value of 0 in block <inst_ShiftLeft2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <input0_2> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input0_3> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input0_4> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input0_5> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input0_6> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input0_7> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input1_5> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input1_6> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input1_7> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input2_0> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input2_1> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <input2_2> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <aux1_8> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <aux1_9> of sequential type is unconnected in block <inst_instrReg>.
+WARNING:Xst:2677 - Node <aux1_10> of sequential type is unconnected in block <inst_instrReg>.
+
+Synthesizing (advanced) Unit <ClockDivisorN_1>.
+The following registers are absorbed into counter <count_0>: 1 register on signal <count_0>.
+Unit <ClockDivisorN_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ClockDivisorN_2>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <ClockDivisorN_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ClockDivisorN_3>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <ClockDivisorN_3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Display7Segments>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_leds_n_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <hex_i>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <leds_n_o>      |          |
+    -----------------------------------------------------------------------
+Unit <Display7Segments> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Registers>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ReadRegister1[4]_GND_12_o_Mux_31_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ReadRegister1> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ReadRegister2[4]_GND_28_o_Mux_47_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ReadRegister2> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Registers> synthesized (advanced).
+WARNING:Xst:2677 - Node <input0_2> of sequential type is unconnected in block <Instr_Register>.
+WARNING:Xst:2677 - Node <input0_3> of sequential type is unconnected in block <Instr_Register>.
+WARNING:Xst:2677 - Node <input0_4> of sequential type is unconnected in block <Instr_Register>.
+WARNING:Xst:2677 - Node <input0_5> of sequential type is unconnected in block <Instr_Register>.
+WARNING:Xst:2677 - Node <input0_6> of sequential type is unconnected in block <Instr_Register>.
+WARNING:Xst:2677 - Node <input0_7> of sequential type is unconnected in block <Instr_Register>.
+WARNING:Xst:2677 - Node <input1_5> of sequential type is unconnected in block <Instr_Register>.
+WARNING:Xst:2677 - Node <input1_6> of sequential type is unconnected in block <Instr_Register>.
+WARNING:Xst:2677 - Node <input1_7> of sequential type is unconnected in block <Instr_Register>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 32x1-bit single-port distributed Read Only RAM        : 2
+# Adders/Subtractors                                   : 2
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Counters                                             : 3
+ 1-bit up counter                                      : 1
+ 12-bit up counter                                     : 1
+ 19-bit up counter                                     : 1
+# Registers                                            : 194
+ Flip-Flops                                            : 194
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 35
+ 1-bit 2-to-1 multiplexer                              : 3
+ 1-bit 8-to-1 multiplexer                              : 16
+ 5-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 13
+ 8-bit 4-to-1 multiplexer                              : 2
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <bit_o_0> (without init value) has a constant value of 0 in block <ShiftRegister2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bit_o_1> (without init value) has a constant value of 0 in block <ShiftRegister2>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ReadRegister1[4]_clk_i_DFF_37> in Unit <Registers> is equivalent to the following 7 FFs/Latches, which will be removed : <ReadRegister1[4]_clk_i_DFF_36> <ReadRegister1[4]_clk_i_DFF_40> <ReadRegister1[4]_clk_i_DFF_38> <ReadRegister1[4]_clk_i_DFF_39> <ReadRegister1[4]_clk_i_DFF_43> <ReadRegister1[4]_clk_i_DFF_41> <ReadRegister1[4]_clk_i_DFF_42> 
+INFO:Xst:2261 - The FF/Latch <ReadRegister2[4]_clk_i_DFF_46> in Unit <Registers> is equivalent to the following 7 FFs/Latches, which will be removed : <ReadRegister2[4]_clk_i_DFF_44> <ReadRegister2[4]_clk_i_DFF_45> <ReadRegister2[4]_clk_i_DFF_49> <ReadRegister2[4]_clk_i_DFF_47> <ReadRegister2[4]_clk_i_DFF_48> <ReadRegister2[4]_clk_i_DFF_50> <ReadRegister2[4]_clk_i_DFF_51> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_1> on signal <currentDisplay[1:2]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ display0 | 00
+ display1 | 01
+ display2 | 11
+ display3 | 10
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <estado_actual[1:4]> with sequential encoding.
+----------------------
+ State    | Encoding
+----------------------
+ estado0  | 0000
+ estado1  | 0001
+ estado2  | 0010
+ estado3  | 0011
+ estado4  | 0100
+ estado5  | 1000
+ estado6  | 1011
+ estado7  | 1100
+ estado8  | 1010
+ estado9  | 1001
+ estado10 | 0101
+ estado11 | 1101
+ estado12 | 0111
+ estado13 | 0110
+----------------------
+WARNING:Xst:2042 - Unit Registers: 16 internal tristates are replaced by logic (pull-up yes): ReadData1<0>, ReadData1<1>, ReadData1<2>, ReadData1<3>, ReadData1<4>, ReadData1<5>, ReadData1<6>, ReadData1<7>, ReadData2<0>, ReadData2<1>, ReadData2<2>, ReadData2<3>, ReadData2<4>, ReadData2<5>, ReadData2<6>, ReadData2<7>.
+
+Optimizing unit <MyBuffer> ...
+
+Optimizing unit <PC> ...
+
+Optimizing unit <MemDataReg> ...
+
+Optimizing unit <MiniMips_BRAM> ...
+
+Optimizing unit <Instr_Register> ...
+
+Optimizing unit <Registers> ...
+
+Optimizing unit <ALU> ...
+WARNING:Xst:2677 - Node <inst_instrReg/aux1_10> of sequential type is unconnected in block <MiniMips_BRAM>.
+WARNING:Xst:2677 - Node <inst_instrReg/aux1_9> of sequential type is unconnected in block <MiniMips_BRAM>.
+WARNING:Xst:2677 - Node <inst_instrReg/aux1_8> of sequential type is unconnected in block <MiniMips_BRAM>.
+WARNING:Xst:2677 - Node <inst_instrReg/input2_2> of sequential type is unconnected in block <MiniMips_BRAM>.
+WARNING:Xst:2677 - Node <inst_instrReg/input2_1> of sequential type is unconnected in block <MiniMips_BRAM>.
+WARNING:Xst:2677 - Node <inst_instrReg/input2_0> of sequential type is unconnected in block <MiniMips_BRAM>.
+INFO:Xst:2261 - The FF/Latch <instClockDivider2/count_0> in Unit <MiniMips_BRAM> is equivalent to the following FF/Latch, which will be removed : <instClockDivider3/count_0> 
+INFO:Xst:2261 - The FF/Latch <instClockDivider2/count_1> in Unit <MiniMips_BRAM> is equivalent to the following FF/Latch, which will be removed : <instClockDivider3/count_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MiniMips_BRAM, actual ratio is 4.
+FlipFlop inst_control/estado_actual_FSM_FFd1 has been replicated 4 time(s)
+FlipFlop inst_control/estado_actual_FSM_FFd2 has been replicated 4 time(s)
+FlipFlop inst_control/estado_actual_FSM_FFd3 has been replicated 4 time(s)
+FlipFlop inst_control/estado_actual_FSM_FFd4 has been replicated 4 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 224
+ Flip-Flops                                            : 224
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MiniMips_BRAM.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 352
+#      GND                         : 2
+#      INV                         : 4
+#      LUT1                        : 29
+#      LUT2                        : 34
+#      LUT3                        : 11
+#      LUT4                        : 36
+#      LUT5                        : 29
+#      LUT6                        : 116
+#      MUXCY                       : 43
+#      MUXF7                       : 1
+#      VCC                         : 2
+#      XORCY                       : 45
+# FlipFlops/Latches                : 224
+#      FD                          : 20
+#      FDC                         : 68
+#      FDCE                        : 93
+#      FDE                         : 14
+#      FDR                         : 29
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 1
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             224  out of  18224     1%  
+ Number of Slice LUTs:                  259  out of   9112     2%  
+    Number used as Logic:               259  out of   9112     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    380
+   Number with an unused Flip Flop:     156  out of    380    41%  
+   Number with an unused LUT:           121  out of    380    31%  
+   Number of fully used LUT-FF pairs:   103  out of    380    27%  
+   Number of unique control sets:        23
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)            | Load  |
+-----------------------------------+----------------------------------+-------+
+clk_global                         | BUFGP                            | 50    |
+instClockDivider1/clk_div_o        | BUFG                             | 173   |
+instClockDivider3/clk_div_o        | NONE(instClockDivider1/clk_div_o)| 2     |
+-----------------------------------+----------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.975ns (Maximum Frequency: 167.371MHz)
+   Minimum input arrival time before clock: 4.842ns
+   Maximum output required time after clock: 4.649ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_global'
+  Clock period: 4.103ns (frequency: 243.724MHz)
+  Total number of paths / destination ports: 777 / 70
+-------------------------------------------------------------------------
+Delay:               4.103ns (Levels of Logic = 2)
+  Source:            instClockDivider3/count_15 (FF)
+  Destination:       instClockDivider3/count_2 (FF)
+  Source Clock:      clk_global rising
+  Destination Clock: clk_global rising
+
+  Data Path: instClockDivider3/count_15 to instClockDivider3/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.961  instClockDivider3/count_15 (instClockDivider3/count_15)
+     LUT5:I0->O            1   0.203   0.808  instClockDivider3/PWR_57_o_count[18]_equal_1_o<18>1 (instClockDivider3/PWR_57_o_count[18]_equal_1_o<18>)
+     LUT5:I2->O           18   0.205   1.049  instClockDivider3/PWR_57_o_count[18]_equal_1_o<18>4 (instClockDivider3/PWR_57_o_count[18]_equal_1_o)
+     FDR:R                     0.430          instClockDivider3/count_2
+    ----------------------------------------
+    Total                      4.103ns (1.285ns logic, 2.818ns route)
+                                       (31.3% logic, 68.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'instClockDivider1/clk_div_o'
+  Clock period: 5.975ns (frequency: 167.371MHz)
+  Total number of paths / destination ports: 13933 / 241
+-------------------------------------------------------------------------
+Delay:               5.975ns (Levels of Logic = 7)
+  Source:            inst_pc/actual_0 (FF)
+  Destination:       inst_pc/actual_4 (FF)
+  Source Clock:      instClockDivider1/clk_div_o rising
+  Destination Clock: instClockDivider1/clk_div_o rising
+
+  Data Path: inst_pc/actual_0 to inst_pc/actual_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.447   1.028  inst_pc/actual_0 (inst_pc/actual_0)
+     LUT6:I1->O            4   0.203   0.788  inst_mux4/Mmux_c_o11 (auxMux4out<0>)
+     LUT2:I0->O            1   0.203   0.000  inst_ALU/Msub_ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>_lut<0> (inst_ALU/Msub_ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  inst_ALU/Msub_ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>_cy<0> (inst_ALU/Msub_ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>_cy<0>)
+     XORCY:CI->O           3   0.180   0.755  inst_ALU/Msub_ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>_xor<1> (inst_ALU/ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<1>)
+     LUT4:I2->O            1   0.203   0.580  auxPCEn5 (auxPCEn5)
+     LUT6:I5->O            8   0.205   0.907  auxPCEn6 (auxPCEn6)
+     LUT6:I4->O            1   0.203   0.000  inst_pc/actual_4_rstpot (inst_pc/actual_4_rstpot)
+     FDC:D                     0.102          inst_pc/actual_4
+    ----------------------------------------
+    Total                      5.975ns (1.918ns logic, 4.057ns route)
+                                       (32.1% logic, 67.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'instClockDivider3/clk_div_o'
+  Clock period: 1.950ns (frequency: 512.794MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.950ns (Levels of Logic = 1)
+  Source:            instClockDivider1/count_0 (FF)
+  Destination:       instClockDivider1/count_0 (FF)
+  Source Clock:      instClockDivider3/clk_div_o rising
+  Destination Clock: instClockDivider3/clk_div_o rising
+
+  Data Path: instClockDivider1/count_0 to instClockDivider1/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  instClockDivider1/count_0 (instClockDivider1/count_0)
+     INV:I->O              1   0.206   0.579  instClockDivider1/count_0_rstpot_INV_0 (instClockDivider1/count_0_rstpot)
+     FD:D                      0.102          instClockDivider1/count_0
+    ----------------------------------------
+    Total                      1.950ns (0.755ns logic, 1.195ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'instClockDivider1/clk_div_o'
+  Total number of paths / destination ports: 173 / 173
+-------------------------------------------------------------------------
+Offset:              4.842ns (Levels of Logic = 2)
+  Source:            reset_global (PAD)
+  Destination:       inst_instrReg/input2_7 (FF)
+  Destination Clock: instClockDivider1/clk_div_o rising
+
+  Data Path: reset_global to inst_instrReg/input2_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           181   1.222   2.381  reset_global_IBUF (reset_global_IBUF)
+     LUT5:I0->O            5   0.203   0.714  inst_instrReg/_n0100_inv1 (inst_instrReg/_n0100_inv)
+     FDE:CE                    0.322          inst_instrReg/input2_3
+    ----------------------------------------
+    Total                      4.842ns (1.747ns logic, 3.095ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_global'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              3.688ns (Levels of Logic = 1)
+  Source:            reset_global (PAD)
+  Destination:       inst_dispManager/currentDisplay_FSM_FFd2 (FF)
+  Destination Clock: clk_global rising
+
+  Data Path: reset_global to inst_dispManager/currentDisplay_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           181   1.222   2.036  reset_global_IBUF (reset_global_IBUF)
+     FDC:CLR                   0.430          inst_dispManager/currentDisplay_FSM_FFd2
+    ----------------------------------------
+    Total                      3.688ns (1.652ns logic, 2.036ns route)
+                                       (44.8% logic, 55.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_global'
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Offset:              4.649ns (Levels of Logic = 2)
+  Source:            inst_dispManager/currentDisplay_FSM_FFd1 (FF)
+  Destination:       en_n_o<3> (PAD)
+  Source Clock:      clk_global rising
+
+  Data Path: inst_dispManager/currentDisplay_FSM_FFd1 to en_n_o<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.447   0.849  inst_dispManager/currentDisplay_FSM_FFd1 (inst_dispManager/currentDisplay_FSM_FFd1)
+     LUT2:I0->O            1   0.203   0.579  inst_dispManager/currentDisplay_en_n_o<0>1 (en_n_o_0_OBUF)
+     OBUF:I->O                 2.571          en_n_o_0_OBUF (en_n_o<0>)
+    ----------------------------------------
+    Total                      4.649ns (3.221ns logic, 1.428ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_global
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+clk_global                 |    4.103|         |         |         |
+instClockDivider1/clk_div_o|    3.238|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock instClockDivider1/clk_div_o
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+clk_global                 |    5.891|         |         |         |
+instClockDivider1/clk_div_o|    5.975|         |         |         |
+instClockDivider3/clk_div_o|    1.780|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock instClockDivider3/clk_div_o
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+instClockDivider3/clk_div_o|    1.950|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.52 secs
+ 
+--> 
+
+Total memory usage is 197892 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   44 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+

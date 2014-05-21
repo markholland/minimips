@@ -85,13 +85,13 @@ end DCM;
 
 architecture xilinx of DCM is
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of xilinx : architecture is "DCM,clk_wiz_v3_6,{component_name=DCM,use_phase_alignment=false,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,feedback_source=FDBK_AUTO,primtype_sel=DCM_SP,num_out_clk=1,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,use_status=false,use_freeze=false,use_clk_valid=false,feedback_type=SINGLE,clock_mgr_type=AUTO,manual_override=false}";
+  attribute CORE_GENERATION_INFO of xilinx : architecture is "DCM,clk_wiz_v3_6,{component_name=DCM,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,feedback_source=FDBK_AUTO,primtype_sel=DCM_SP,num_out_clk=1,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,use_status=false,use_freeze=false,use_clk_valid=false,feedback_type=SINGLE,clock_mgr_type=AUTO,manual_override=false}";
 	  -- Input clock buffering / unused connectors
   signal clkin1            : std_logic;
   -- Output clock buffering
+  signal clk_out1_internal : std_logic;
   signal clkfb             : std_logic;
-  signal clk0              : std_logic;
-  signal clkfx             : std_logic;
+  signal clk2x             : std_logic;
   signal clkfbout          : std_logic;
   signal locked_internal   : std_logic;
   signal status_internal   : std_logic_vector(7 downto 0);
@@ -116,11 +116,11 @@ begin
   generic map
    (CLKDV_DIVIDE          => 2.000,
     CLKFX_DIVIDE          => 1,
-    CLKFX_MULTIPLY        => 2,
+    CLKFX_MULTIPLY        => 4,
     CLKIN_DIVIDE_BY_2     => FALSE,
     CLKIN_PERIOD          => 10.0,
     CLKOUT_PHASE_SHIFT    => "NONE",
-    CLK_FEEDBACK          => "NONE",
+    CLK_FEEDBACK          => "2X",
     DESKEW_ADJUST         => "SYSTEM_SYNCHRONOUS",
     PHASE_SHIFT           => 0,
     STARTUP_WAIT          => FALSE)
@@ -129,13 +129,13 @@ begin
    (CLKIN                 => clkin1,
     CLKFB                 => clkfb,
     -- Output clocks
-    CLK0                  => clk0,
+    CLK0                  => open,
     CLK90                 => open,
     CLK180                => open,
     CLK270                => open,
-    CLK2X                 => open,
+    CLK2X                 => clk2x,
     CLK2X180              => open,
-    CLKFX                 => clkfx,
+    CLKFX                 => open,
     CLKFX180              => open,
     CLKDV                 => open,
    -- Ports for dynamic phase shift
@@ -156,15 +156,18 @@ begin
 
   -- Output buffering
   -------------------------------------
-  -- no phase alignment active, connect to ground
-  clkfb <= '0';
+  clkf_buf : BUFG 
+  port map 
+   (O => clkfb,
+    I => clk2x);
 
 
   clkout1_buf : BUFG
   port map
-   (O   => CLK_OUT1,
-    I   => clkfx);
+   (O   => clk_out1_internal,
+    I   => clk2x);
 
 
+  CLK_OUT1 <= clk_out1_internal;
 
 end xilinx;

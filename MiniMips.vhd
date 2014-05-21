@@ -276,7 +276,7 @@ begin
 	
 	inst_memory : Memory
 	port map(
-				clk_i => clk_global,
+				clk_i => auxClockDivider_global,
 				address => auxMux1out,
 				WriteData => auxBout,
 				MemData => auxMemData,
@@ -441,7 +441,7 @@ begin
 	inst_dispManager : DisplaysManager
 	port map(
 				rst_i => reset_global,
-            clk_i => auxClockDivider1,
+            clk_i => clk_global,
             en_i => auxClockDivider2,
             a_i => auxPort0(3 downto 0),
             b_i => auxPort1(3 downto 0),
@@ -457,33 +457,33 @@ begin
             leds_n_o => display_n_o
 	);
 	
-	instClockDivider1 : ClockDivisorN
-	generic map (DIVIDE => 2)
-   port map ( 
-				 clk_i => clk_global,
-             clk_div_o => auxClockDivider1
-	);
-	
 --	instClockDivider1 : ClockDivisorN
 --	generic map (DIVIDE => 2)
 --   port map ( 
 --				 clk_i => clk_global,
---           clk_div_o => auxClockDivider1
+--             clk_div_o => auxClockDivider1
 --	);
 	
+	instClockDivider1 : ClockDivisorN
+	generic map (DIVIDE => 2)
+   port map ( 
+			  clk_i => auxClockDivider_global,
+           clk_div_o => auxClockDivider1			-- Everything but memory uses this clock
+	);
 	
---	instClockDivider3 : ClockDivisorN
---	generic map (DIVIDE => 1000000)
---   port map ( 
---				 clk_i => clk_global,
---           clk_div_o => auxClockDivider_global
---	);
+	
+	instClockDivider3 : ClockDivisorN
+	generic map (DIVIDE => 500000)
+   port map ( 
+			  clk_i => clk_global,
+           clk_div_o => auxClockDivider_global  -- Memory uses this clock directly
+	);
 	
 	instClockDivider2 : ClockDivisorN
-	generic map (DIVIDE => 100000000)
+	generic map (DIVIDE => 2500)
    port map ( 
 				 clk_i => clk_global,
-             clk_div_o => auxClockDivider2
+             clk_div_o => auxClockDivider2		-- For display manager
 	);
 	
 	

@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Tue May 20 10:09:34 2014
+# Date: Wed May 21 11:14:19 2014
 #
 ##############################################################
 #
@@ -106,8 +106,8 @@ CSET clock_mgr_type=AUTO
 CSET component_name=DCM
 CSET daddr_port=DADDR
 CSET dclk_port=DCLK
-CSET dcm_clk_feedback=NONE
-CSET dcm_clk_out1_port=CLKFX
+CSET dcm_clk_feedback=2X
+CSET dcm_clk_out1_port=CLK2X
 CSET dcm_clk_out2_port=CLK0
 CSET dcm_clk_out3_port=CLK0
 CSET dcm_clk_out4_port=CLK0
@@ -115,7 +115,7 @@ CSET dcm_clk_out5_port=CLK0
 CSET dcm_clk_out6_port=CLK0
 CSET dcm_clkdv_divide=2.0
 CSET dcm_clkfx_divide=1
-CSET dcm_clkfx_multiply=2
+CSET dcm_clkfx_multiply=4
 CSET dcm_clkgen_clk_out1_port=CLKFX
 CSET dcm_clkgen_clk_out2_port=CLKFX
 CSET dcm_clkgen_clk_out3_port=CLKFX
@@ -218,7 +218,7 @@ CSET pll_clkout4_phase=0.000
 CSET pll_clkout5_divide=1
 CSET pll_clkout5_duty_cycle=0.500
 CSET pll_clkout5_phase=0.000
-CSET pll_compensation=INTERNAL
+CSET pll_compensation=SYSTEM_SYNCHRONOUS
 CSET pll_divclk_divide=1
 CSET pll_notes=None
 CSET pll_ref_jitter=0.010
@@ -255,7 +255,7 @@ CSET use_locked=true
 CSET use_max_i_jitter=false
 CSET use_min_o_jitter=false
 CSET use_min_power=false
-CSET use_phase_alignment=false
+CSET use_phase_alignment=true
 CSET use_power_down=false
 CSET use_reset=true
 CSET use_spread_spectrum=false
@@ -266,4 +266,4 @@ CSET use_status=false
 MISC pkg_timestamp=2012-05-10T12:44:55Z
 # END Extra information
 GENERATE
-# CRC: 3acdf349
+# CRC: b97504f1

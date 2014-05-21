@@ -1,62 +1,49 @@
 INFO:sim:172 - Generating IP...
 Applying current project options...
 Finished applying current project options.
-WARNING:sim - A core named 'memory_BRAM' already exists in the project. Output
-   products for this core may be overwritten.
-Resolving generics for 'memory_BRAM'...
-WARNING:sim - A core named 'memory_BRAM' already exists in the project. Output
-   products for this core may be overwritten.
-Applying external generics to 'memory_BRAM'...
-Delivering associated files for 'memory_BRAM'...
-Delivering EJava files for 'memory_BRAM'...
-Generating implementation netlist for 'memory_BRAM'...
-INFO:sim - Pre-processing HDL files for 'memory_BRAM'...
-Running synthesis for 'memory_BRAM'
-Running ngcbuild...
-Writing VHO instantiation template for 'memory_BRAM'...
-Writing VHDL behavioral simulation model for 'memory_BRAM'...
-WARNING:sim - Overwriting existing file Z:/Dropbox/UNI 13-14/2nd
-   Semester/Dsd/Xilinx
-   Projects/Lab5/ipcore_dir/tmp/_cg/memory_BRAM/doc/blk_mem_gen_v7_3_vinfo.html
-   with file from view xilinx_documentation
+WARNING:sim - A core named 'DCM' already exists in the project. Output products
+   for this core may be overwritten.
+Resolving generics for 'DCM'...
+WARNING:sim - A core named 'DCM' already exists in the project. Output products
+   for this core may be overwritten.
+Applying external generics to 'DCM'...
+Delivering associated files for 'DCM'...
+WARNING:sim - Component clk_wiz_v3_6 does not have a valid model name for VHDL
+   synthesis
+Delivering EJava files for 'DCM'...
+Delivered 3 files into directory Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx
+Projects/Lab5/ipcore_dir/tmp/_cg/DCM
 Delivered 1 file into directory Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx
-Projects/Lab5/ipcore_dir/tmp/_cg/memory_BRAM
+Projects/Lab5/ipcore_dir/tmp/_cg/DCM
 Generating ASY schematic symbol...
+Loading device for application Rf_Device from file '6slx16.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\.
 INFO:sim:949 - Finished generation of ASY schematic symbol.
-Generating SYM schematic symbol for 'memory_BRAM'...
-Generating metadata file...
-Regenerating ISE project file for 'memory_BRAM'...
+Generating SYM schematic symbol for 'DCM'...
 Generating ISE project...
-XCO file found: memory_BRAM.xco
-XMDF file found: memory_BRAM_xmdf.tcl
+XCO file found: DCM.xco
+XMDF file found: DCM_xmdf.tcl
 Adding Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx
-Projects/Lab5/ipcore_dir/tmp/_cg/memory_BRAM.asy -view all -origin_type imported
+Projects/Lab5/ipcore_dir/tmp/_cg/DCM.asy -view all -origin_type imported
 Adding Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx
-Projects/Lab5/ipcore_dir/tmp/_cg/memory_BRAM.ngc -view all -origin_type created
-Checking file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx
-Projects/Lab5/ipcore_dir/tmp/_cg/memory_BRAM.ngc" for project device match ...
-File "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx
-Projects/Lab5/ipcore_dir/tmp/_cg/memory_BRAM.ngc" device information matches
-project device.
+Projects/Lab5/ipcore_dir/tmp/_cg/DCM.ucf -view all -origin_type created
 Adding Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx
-Projects/Lab5/ipcore_dir/tmp/_cg/memory_BRAM.sym -view all -origin_type imported
-Adding Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx
-Projects/Lab5/ipcore_dir/tmp/_cg/memory_BRAM.vhd -view all -origin_type created
+Projects/Lab5/ipcore_dir/tmp/_cg/DCM.vhd -view all -origin_type created
 INFO:HDLCompiler:1061 - Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd
-   Semester/Dsd/Xilinx Projects/Lab5/ipcore_dir/tmp/_cg/memory_BRAM.vhd" into
-   library work
+   Semester/Dsd/Xilinx Projects/Lab5/ipcore_dir/tmp/_cg/DCM.vhd" into library
+   work
 INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
 Adding Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx
-Projects/Lab5/ipcore_dir/tmp/_cg/memory_BRAM.vho -view all -origin_type imported
+Projects/Lab5/ipcore_dir/tmp/_cg/DCM.vho -view all -origin_type imported
 INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
    Please set the new top explicitly by running the "project set top" command.
    To re-calculate the new top automatically, set the "Auto Implementation Top"
    property to true.
-Top level has been set to "/memory_BRAM"
+Top level has been set to "/DCM"
 Generating README file...
 Generating FLIST file...
 INFO:sim:948 - Finished FLIST file generation.
 Launching README viewer...
 Moving files to output directory...
 Finished moving files to output directory
-Wrote CGP file for project 'memory_BRAM'.
+Wrote CGP file for project 'DCM'.
