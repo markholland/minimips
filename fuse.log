@@ -1,44 +1,38 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_BRAM_isim_beh.exe -prj Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_BRAM_beh.prj work.test_MiniMips_BRAM 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_isim_beh.exe -prj Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_beh.prj work.test_MiniMips 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
-Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/ipcore_dir/memory_BRAM.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/ShiftRegister2.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Registers.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/PC.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MyBuffer.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Multiplexer4.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Multiplexer2.vhd" into library work
+Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Memory.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MemDataReg.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Instr_Register.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/DisplaysManager.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Display7Segments.vhd" into library work
-Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Control_BRAM.vhd" into library work
+Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Control.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/ClockDivisorN.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/ALUControl.vhd" into library work
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/ALU.vhd" into library work
-Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips_BRAM.vhd" into library work
-Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_BRAM.vhd" into library work
+Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" into library work
+Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_minimips.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 105132 KB
-Fuse CPU Usage: 592 ms
+Fuse Memory Usage: 103916 KB
+Fuse CPU Usage: 732 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
+Compiling package std_logic_unsigned
 Compiling package std_logic_signed
 Compiling package numeric_std
 Compiling architecture behavioral of entity PC [pc_default]
 Compiling architecture behavioralv1 of entity Multiplexer2 [\Multiplexer2(8)\]
-Compiling package textio
-Compiling package std_logic_unsigned
-Compiling package std_logic_textio
-Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
-Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
-Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_3_mem_module [\BLK_MEM_GEN_V7_3_mem_module("bl...]
-Compiling architecture behavioral of entity BLK_MEM_GEN_V7_3 [\BLK_MEM_GEN_V7_3("blk_mem_gen_v...]
-Compiling architecture memory_bram_a of entity memory_BRAM [memory_bram_default]
+Compiling architecture behavioral of entity Memory [memory_default]
 Compiling architecture behavioral of entity MemDataReg [memdatareg_default]
 Compiling architecture behavioral of entity Instr_Register [instr_register_default]
 Compiling architecture behavioralv1 of entity Multiplexer2 [\Multiplexer2(5)\]
@@ -48,15 +42,15 @@ Compiling architecture structural of entity Multiplexer4 [\Multiplexer4(8)\]
 Compiling architecture behavioral of entity ALUControl [alucontrol_default]
 Compiling architecture behavioral of entity ALU [alu_default]
 Compiling architecture comportamental of entity ShiftRegister2 [shiftregister2_default]
-Compiling architecture comportamental of entity Control_BRAM [control_bram_default]
+Compiling architecture comportamental of entity Control [control_default]
 Compiling architecture behavioral of entity DisplaysManager [displaysmanager_default]
 Compiling architecture behavioral of entity Display7Segments [display7segments_default]
 Compiling architecture behavioral of entity ClockDivisorN [\ClockDivisorN(2)\]
 Compiling architecture behavioral of entity ClockDivisorN [\ClockDivisorN(100000000)\]
-Compiling architecture structural of entity MiniMips_BRAM [minimips_bram_default]
-Compiling architecture behavior of entity test_minimips_bram
+Compiling architecture structural of entity MiniMips [minimips_default]
+Compiling architecture behavior of entity test_minimips
 Time Resolution for simulation is 1ps.
-Compiled 53 VHDL Units
-Built simulation executable Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_BRAM_isim_beh.exe
-Fuse Memory Usage: 129496 KB
-Fuse CPU Usage: 1325 ms
+Compiled 43 VHDL Units
+Built simulation executable Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_isim_beh.exe
+Fuse Memory Usage: 123928 KB
+Fuse CPU Usage: 1356 ms

@@ -65,16 +65,16 @@ begin
 		case IRWrite is
 			when "1000" =>
 				input0 <= instr_in;
+				aux4 <= instr_in(7 downto 2);
 			when "0100" =>
 				input1 <= instr_in;
+				aux3 <= input0(1 downto 0)&instr_in(7 downto 5);
 			when "0010" =>
 				input2 <= instr_in;
-			when "0001" =>
-				--input3 <= instr_in;
-				aux1 <=  input2&instr_in;
 				aux2 <=  input1(4 downto 0);
-				aux3 <=  input0(1 downto 0)&input1(7 downto 5);
-				aux4 <=  input0(7 downto 2);
+			when "0001" =>
+				aux1 <=  input2&instr_in;			
+				
 			when others =>
 				
 		end case;

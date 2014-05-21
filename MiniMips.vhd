@@ -340,7 +340,7 @@ begin
 	
 	inst_A : MyBuffer
 	port map(
-				clk_i => clk_global,
+				clk_i => auxClockDivider1,
             reset => reset_global,
             buf_in => auxReadData1,
             buf_out => auxAout
@@ -348,7 +348,7 @@ begin
 	
 	inst_B : MyBuffer
 	port map(
-				clk_i => clk_global,
+				clk_i => auxClockDivider1,
             reset => reset_global,
             buf_in => auxReadData2,
             buf_out => auxBout
@@ -467,7 +467,7 @@ begin
 --	instClockDivider1 : ClockDivisorN
 --	generic map (DIVIDE => 2)
 --   port map ( 
---				 clk_i => auxClockDivider_global,
+--				 clk_i => clk_global,
 --           clk_div_o => auxClockDivider1
 --	);
 	
