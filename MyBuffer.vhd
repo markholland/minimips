@@ -31,6 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MyBuffer is
     Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
            reset : in  STD_LOGIC;
            buf_in : in  STD_LOGIC_VECTOR (7 downto 0);
            buf_out : out  STD_LOGIC_VECTOR (7 downto 0));
@@ -47,7 +48,9 @@ begin
 	if(reset='1') then
 		aux <= (others=>'0');
 	elsif(clk_i'event and clk_i='1') then
-		aux <= buf_in;
+		if(en = '1') then
+			aux <= buf_in;
+		end if;
 	end if;
 	end process;
 	

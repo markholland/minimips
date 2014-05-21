@@ -12,6 +12,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ShiftRegister2 is
     Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
 			  reset : in  STD_LOGIC;
            bit_i : in  STD_LOGIC_VECTOR(5 downto 0);
            bit_o : out  STD_LOGIC_VECTOR(7 downto 0));
@@ -28,7 +29,9 @@ begin
 	if(reset='1') then
 		bit_o <= "00000000";
 	elsif(clk_i'event and clk_i='1') then
-		bit_o <= bit_i&"00";
+		if(en = '1') then
+			bit_o <= bit_i&"00";
+		end if;
 	end if;
 	
 	end process;

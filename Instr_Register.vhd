@@ -31,6 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Instr_Register is
     Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
            reset : in  STD_LOGIC;
 			  IRWrite : in STD_LOGIC_VECTOR (3 downto 0);
 			  instr_in : in  STD_LOGIC_VECTOR (7 downto 0);
@@ -62,22 +63,24 @@ begin
 		aux3 <= (others=>'0');
 		aux4 <= (others=>'0');
 	elsif(clk_i'event and clk_i='1') then
-		case IRWrite is
-			when "1000" =>
-				input0 <= instr_in;
-				aux4 <= instr_in(7 downto 2);
-			when "0100" =>
-				input1 <= instr_in;
-				aux3 <= input0(1 downto 0)&instr_in(7 downto 5);
-			when "0010" =>
-				input2 <= instr_in;
-				aux2 <=  input1(4 downto 0);
-			when "0001" =>
-				aux1 <=  input2&instr_in;			
-				
-			when others =>
-				
-		end case;
+		if(en = '1') then
+			case IRWrite is
+				when "1000" =>
+					input0 <= instr_in;
+					aux4 <= instr_in(7 downto 2);
+				when "0100" =>
+					input1 <= instr_in;
+					aux3 <= input0(1 downto 0)&instr_in(7 downto 5);
+				when "0010" =>
+					input2 <= instr_in;
+					aux2 <=  input1(4 downto 0);
+				when "0001" =>
+					aux1 <=  input2&instr_in;			
+					
+				when others =>
+					
+			end case;
+		end if;
 		
 	end if;
 	

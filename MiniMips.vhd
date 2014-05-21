@@ -55,6 +55,7 @@ architecture Structural of MiniMips is
 	
 	component PC is
     Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
 			  reset : in STD_LOGIC;
            PCEn : in  STD_LOGIC;
            pc_in : in  STD_LOGIC_VECTOR (7 downto 0);
@@ -63,6 +64,7 @@ architecture Structural of MiniMips is
 	
 	component Memory is
 	 Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
            address : in  STD_LOGIC_VECTOR(7 downto 0);
            WriteData : in  STD_LOGIC_VECTOR(7  DOWNTO 0);
            MemData : out  STD_LOGIC_VECTOR(7  DOWNTO 0);
@@ -76,6 +78,7 @@ architecture Structural of MiniMips is
 	
 	component Instr_Register is
     Port ( clk_i : in  STD_LOGIC;
+	        en : in STD_LOGIC;
            reset : in  STD_LOGIC;
 			  IRWrite : in STD_LOGIC_VECTOR (3 downto 0);
 			  instr_in : in  STD_LOGIC_VECTOR (7 downto 0);
@@ -87,6 +90,7 @@ architecture Structural of MiniMips is
 	
 	component MemDataReg is
     Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
            reset : in  STD_LOGIC;
            data_in : in  STD_LOGIC_VECTOR(7 downto 0);
            data_out : out  STD_LOGIC_VECTOR(7 downto 0));
@@ -114,6 +118,7 @@ architecture Structural of MiniMips is
 	
 	component Registers is
     Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
            reset : in  STD_LOGIC;
            RegWrite : in  STD_LOGIC;
            ReadRegister1 : in  STD_LOGIC_VECTOR (4 downto 0);
@@ -140,6 +145,7 @@ architecture Structural of MiniMips is
 	
 	component ShiftRegister2 is
     Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
 			  reset : in  STD_LOGIC;
            bit_i : in  STD_LOGIC_VECTOR(5 downto 0);
            bit_o : out  STD_LOGIC_VECTOR(7 downto 0));
@@ -147,6 +153,7 @@ architecture Structural of MiniMips is
 	
 	component MyBuffer is
     Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
            reset : in  STD_LOGIC;
            buf_in : in  STD_LOGIC_VECTOR (7 downto 0);
            buf_out : out  STD_LOGIC_VECTOR (7 downto 0));
@@ -256,7 +263,8 @@ begin
 
 	inst_pc : PC
 	port map(
-				clk_i => auxClockDivider1, 
+				clk_i => clk_global,
+				en => auxClockDivider1,
 			   reset => reset_global,
             PCEn => auxPCEn,
             pc_in => auxMUX6out,
@@ -276,7 +284,8 @@ begin
 	
 	inst_memory : Memory
 	port map(
-				clk_i => auxClockDivider_global,
+				clk_i => clk_global,
+				en => clk_global, --Use auxClockDivider_global, with FPGA
 				address => auxMux1out,
 				WriteData => auxBout,
 				MemData => auxMemData,
@@ -289,7 +298,8 @@ begin
 	
 	inst_memDataReg : MemDataReg
    port map(
-				clk_i => auxClockDivider1, 
+				clk_i => clk_global,
+				en => auxClockDivider1,
             reset => reset_global,
             data_in => auxMemData,
             data_out => auxMemDataRegout
@@ -297,7 +307,8 @@ begin
 	
 	inst_instrReg : Instr_Register
    port map( 
-			   clk_i => auxClockDivider1,
+			   clk_i => clk_global,
+				en => auxClockDivider1,
             reset => reset_global,
 			   IRWrite => auxIRWrite,
 			   instr_in => auxMemData,
@@ -327,7 +338,8 @@ begin
 	
 	inst_Registers : Registers
 	port map( 
-				clk_i => auxClockDivider1,
+				clk_i => clk_global,
+				en => auxClockDivider1,
             reset => reset_global,
             RegWrite => auxRegWrite,
             ReadRegister1 => auxInstr2out,
@@ -340,7 +352,8 @@ begin
 	
 	inst_A : MyBuffer
 	port map(
-				clk_i => auxClockDivider1,
+				clk_i => clk_global,
+				en => auxClockDivider1,
             reset => reset_global,
             buf_in => auxReadData1,
             buf_out => auxAout
@@ -348,7 +361,8 @@ begin
 	
 	inst_B : MyBuffer
 	port map(
-				clk_i => auxClockDivider1,
+				clk_i => clk_global,
+				en => auxClockDivider1,
             reset => reset_global,
             buf_in => auxReadData2,
             buf_out => auxBout
@@ -392,7 +406,8 @@ begin
 	
 	inst_ALUOut : MyBuffer
 	port map(
-				clk_i => auxClockDivider1,
+				clk_i => clk_global,
+				en => auxClockDivider1,
             reset => reset_global,
             buf_in => auxALUResult,
             buf_out => auxALUout
@@ -400,7 +415,8 @@ begin
 	
 	inst_ShiftLeft2 : ShiftRegister2
 	port map(
-				clk_i => auxClockDivider1,
+				clk_i => clk_global,
+				en => auxClockDivider1,
 			   reset => reset_global,
             bit_i => auxInstr0out(5 downto 0),
             bit_o => auxShiftLeft2
@@ -419,7 +435,7 @@ begin
 	
 	inst_control : Control
 	port map(
-	         clk_i => auxClockDivider1,
+	         clk_i => clk_global,
 			   reset => reset_global,
 			   en => auxClockDivider1,
 			   Op => auxInstr3out,
@@ -457,27 +473,30 @@ begin
             leds_n_o => display_n_o
 	);
 	
---	instClockDivider1 : ClockDivisorN
---	generic map (DIVIDE => 2)
---   port map ( 
---				 clk_i => clk_global,
---             clk_div_o => auxClockDivider1
---	);
-	
 	instClockDivider1 : ClockDivisorN
 	generic map (DIVIDE => 2)
    port map ( 
-			  clk_i => auxClockDivider_global,
-           clk_div_o => auxClockDivider1			-- Everything but memory uses this clock
+			    clk_i => clk_global,
+             clk_div_o => auxClockDivider1
 	);
 	
+	-- Comment above and un comment below when using on FPGA, 
+	-- memory enable must also be changed higher up in this file.
 	
-	instClockDivider3 : ClockDivisorN
-	generic map (DIVIDE => 500000)
-   port map ( 
-			  clk_i => clk_global,
-           clk_div_o => auxClockDivider_global  -- Memory uses this clock directly
-	);
+--	instClockDivider1 : ClockDivisorN
+--	generic map (DIVIDE => 2)
+--   port map ( 
+--			  clk_i => auxClockDivider_global,
+--           clk_div_o => auxClockDivider1			-- Everything but memory uses this clock
+--	);
+--	
+--	
+--	instClockDivider3 : ClockDivisorN
+--	generic map (DIVIDE => 500000)
+--   port map ( 
+--			  clk_i => clk_global,
+--           clk_div_o => auxClockDivider_global  -- Memory uses this clock directly
+--	);
 	
 	instClockDivider2 : ClockDivisorN
 	generic map (DIVIDE => 2500)

@@ -31,6 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Registers is
     Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
            reset : in  STD_LOGIC;
            RegWrite : in  STD_LOGIC;
            ReadRegister1 : in  STD_LOGIC_VECTOR (4 downto 0);
@@ -66,27 +67,29 @@ begin
 		register6<=(others=>'0');
 		register7<=(others=>'0');
 	elsif(clk_i'event and clk_i='1') then
-		if(RegWrite='1') then
-			case WriteRegister is
-				when "00000" =>
-					register0 <= WriteData;
-				when "00001" =>
-					register1 <= WriteData;	
-				when "00010" =>
-					register2 <= WriteData;
-				when "00011" =>
-					register3 <= WriteData;
-				when "00100" =>
-					register4 <= WriteData;
-				when "00101" =>
-					register5 <= WriteData;
-				when "00110" =>
-					register6 <= WriteData;
-				when "00111" =>
-					register7 <= WriteData;
-				when others =>
-				
-			end case;
+		if(en = '1') then
+			if(RegWrite='1') then
+				case WriteRegister is
+					when "00000" =>
+						register0 <= WriteData;
+					when "00001" =>
+						register1 <= WriteData;	
+					when "00010" =>
+						register2 <= WriteData;
+					when "00011" =>
+						register3 <= WriteData;
+					when "00100" =>
+						register4 <= WriteData;
+					when "00101" =>
+						register5 <= WriteData;
+					when "00110" =>
+						register6 <= WriteData;
+					when "00111" =>
+						register7 <= WriteData;
+					when others =>
+					
+				end case;
+			end if;
 		end if;
 		
 		case ReadRegister1 is

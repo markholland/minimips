@@ -31,6 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity PC is
     Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
 			  reset : in STD_LOGIC;
            PCEn : in  STD_LOGIC;
            pc_in : in  STD_LOGIC_VECTOR (7 downto 0);
@@ -49,8 +50,10 @@ begin
 		if (reset = '1') then
 			actual <= (others=>'0');
 		elsif(clk_i'event and clk_i='1') then
-			if(PCEn = '1') then
-				actual <= pc_in;
+			if(en = '1') then
+				if(PCEn = '1') then
+					actual <= pc_in;
+				end if;
 			end if;
 		end if;	
 	end process;

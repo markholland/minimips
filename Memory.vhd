@@ -32,6 +32,7 @@ USE ieee.std_logic_unsigned.ALL;
 
 entity Memory is
 	 Port ( clk_i : in  STD_LOGIC;
+			  en : in STD_LOGIC;
            address : in  STD_LOGIC_VECTOR(7 downto 0);
            WriteData : in  STD_LOGIC_VECTOR(7  DOWNTO 0);
            MemData : out  STD_LOGIC_VECTOR(7  DOWNTO 0);
@@ -313,15 +314,17 @@ begin
   begin  
 	-- activities triggered by rising edge of clock
     if clk_i'event and clk_i = '1' then
-      if MemRead = '1' then
-			MemData <= mem(conv_integer(address));			
-      else
-		  MemData <= (others => 'Z');    -- Default value
-      end if;
+		if(en = '1') then
+			if MemRead = '1' then
+				MemData <= mem(conv_integer(address));			
+			else
+				MemData <= (others => 'Z');    -- Default value
+			end if;
 
-      if MemWrite = '1' then
-        mem(conv_integer(address)) <= WriteData;
-      end if;
+			if MemWrite = '1' then
+				mem(conv_integer(address)) <= WriteData;
+			end if;
+		end if;
     end if;
 
   end process;

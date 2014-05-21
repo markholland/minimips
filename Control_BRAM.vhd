@@ -66,7 +66,7 @@ begin
 			estado_actual <= estado0;		--Return to initial state on a reset
 		elsif (clk_i'event and (clk_i = '1')) then
 		if(en = '1') then
-		case estado_actual is
+			case estado_actual is
 				when estado0 =>
 					estado_actual <= estado1;
 				when estado1 =>

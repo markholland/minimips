@@ -1,0 +1,102 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: MiniMips.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ShiftRegister2.vhd" into library work
+Parsing entity <ShiftRegister2>.
+Parsing architecture <Comportamental> of entity <shiftregister2>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Registers.vhd" into library work
+Parsing entity <Registers>.
+Parsing architecture <Behavioral> of entity <registers>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\PC.vhd" into library work
+Parsing entity <PC>.
+Parsing architecture <Behavioral> of entity <pc>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MyBuffer.vhd" into library work
+Parsing entity <MyBuffer>.
+Parsing architecture <Behavioral> of entity <mybuffer>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer4.vhd" into library work
+Parsing entity <Multiplexer4>.
+Parsing architecture <Structural> of entity <multiplexer4>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd" into library work
+Parsing entity <Multiplexer2>.
+Parsing architecture <BehavioralV1> of entity <multiplexer2>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Memory.vhd" into library work
+Parsing entity <Memory>.
+Parsing architecture <Behavioral> of entity <memory>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MemDataReg.vhd" into library work
+Parsing entity <MemDataReg>.
+Parsing architecture <Behavioral> of entity <memdatareg>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Instr_Register.vhd" into library work
+Parsing entity <Instr_Register>.
+Parsing architecture <Behavioral> of entity <instr_register>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\DisplaysManager.vhd" into library work
+Parsing entity <DisplaysManager>.
+Parsing architecture <Behavioral> of entity <displaysmanager>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Display7Segments.vhd" into library work
+Parsing entity <Display7Segments>.
+Parsing architecture <Behavioral> of entity <display7segments>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Control.vhd" into library work
+Parsing entity <Control>.
+Parsing architecture <Comportamental> of entity <control>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ClockDivisorN.vhd" into library work
+Parsing entity <ClockDivisorN>.
+Parsing architecture <Behavioral> of entity <clockdivisorn>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ALUControl.vhd" into library work
+Parsing entity <ALUControl>.
+Parsing architecture <Behavioral> of entity <alucontrol>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips.vhd" into library work
+Parsing entity <MiniMips>.
+Parsing architecture <Structural> of entity <minimips>.
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.27 secs
+ 
+--> 
+
+Total memory usage is 143944 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

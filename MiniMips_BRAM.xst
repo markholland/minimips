@@ -1,9 +1,6 @@
-set -tmpdir "xst/projnav.tmp"
-set -xsthdpdir "xst"
-run
--ifn MiniMips_BRAM.prj
--ofn MiniMips_BRAM
--ofmt NGC
+set -tmpdir "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/xst/projnav.tmp"
+set -xsthdpdir "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/xst"
+run -compileonly yes
 -p xc6slx16-3-csg324
 -top MiniMips_BRAM
 -opt_mode Speed
@@ -51,3 +48,4 @@ run
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
+-ifn MiniMips_BRAM.prj
