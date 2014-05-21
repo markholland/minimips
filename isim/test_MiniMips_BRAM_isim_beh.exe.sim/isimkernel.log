@@ -1,0 +1,10 @@
+Command line:
+   test_MiniMips_BRAM_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49721
+
+Tue May 20 18:24:34 2014
+
+
+ Elaboration Time: 0.1092 sec

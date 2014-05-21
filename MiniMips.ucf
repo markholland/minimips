@@ -1,0 +1,13 @@
+NET "clk_global" LOC="V10";
+NET "reset_global" LOC="A8";
+NET "en_n_o<0>" LOC="N16";
+NET "en_n_o<1>" LOC="N15";
+NET "en_n_o<2>" LOC="P18";
+NET "en_n_o<3>" LOC="P17";
+NET "display_n_o<6>" LOC = "T17";
+NET "display_n_o<5>" LOC = "T18";
+NET "display_n_o<4>" LOC = "U17";
+NET "display_n_o<3>" LOC = "U18";
+NET "display_n_o<2>" LOC = "M14";
+NET "display_n_o<1>" LOC = "N14";
+NET "display_n_o<0>" LOC = "L14";

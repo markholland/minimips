@@ -1,0 +1,39 @@
+ISim log file
+Running: Z:\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\test_MiniMips_BRAM_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_BRAM_isim_beh.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 365 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_minimips_bram/uut/inst_memory/U0/native_mem_module/mem_module/).
+# restart
+# run 9.80us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 365 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_minimips_bram/uut/inst_memory/U0/native_mem_module/mem_module/).
+# restart
+# run 9.80us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 365 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_minimips_bram/uut/inst_memory/U0/native_mem_module/mem_module/).
+# restart
+# run 9.80us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 365 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_minimips_bram/uut/inst_memory/U0/native_mem_module/mem_module/).
+# restart
+# run 9.90us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 365 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_minimips_bram/uut/inst_memory/U0/native_mem_module/mem_module/).
+# restart
+# run 10us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 365 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_minimips_bram/uut/inst_memory/U0/native_mem_module/mem_module/).

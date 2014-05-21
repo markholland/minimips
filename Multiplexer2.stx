@@ -1,0 +1,58 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: Multiplexer2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd" into library work
+Parsing entity <Multiplexer2>.
+Parsing architecture <BehavioralV1> of entity <multiplexer2>.
+ERROR:HDLCompiler:806 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd" Line 25: Syntax error near "case".
+ERROR:HDLCompiler:806 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd" Line 28: Syntax error near "when".
+ERROR:HDLCompiler:806 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd" Line 30: Syntax error near "when".
+ERROR:HDLCompiler:806 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd" Line 32: Syntax error near "case".
+ERROR:HDLCompiler:854 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd" Line 21: Unit <behavioralv1> ignored due to previous errors.
+VHDL file \\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\Multiplexer2.vhd ignored due to errors
+--> 
+
+Total memory usage is 142536 kilobytes
+
+Number of errors   :    5 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

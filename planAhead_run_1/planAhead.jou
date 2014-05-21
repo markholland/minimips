@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Tue May 20 11:28:34 2014
+# Process ID: 3028
+# Log file: Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/planAhead_run_1/planAhead.log
+# Journal file: Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1
