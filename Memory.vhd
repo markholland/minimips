@@ -75,7 +75,7 @@ architecture Behavioral of Memory is
       x"10", -- 24
       x"60", -- 25
       x"00", -- 26
-      x"0E", -- 27 beq $3, $0, fin  -- Changed to 0E from 1D
+      x"1C", -- 27 beq $3, $0, fin  -- Changed to 0E from 1D
       x"00", -- 28
       x"85", -- 29
       x"20", -- 30

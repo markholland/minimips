@@ -211,7 +211,7 @@ begin
 				ALUSrcB <= "00";
 				ALUOp <= "01";
 				PCWriteCond <= '1';
-				PCSource <= "10";
+				PCSource <= "01";
 			when estado13 =>
 				PCWrite <= '1';
 				PCSource <= "10";		

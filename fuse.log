@@ -22,8 +22,8 @@ Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Mi
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_BRAM.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 104940 KB
-Fuse CPU Usage: 498 ms
+Fuse Memory Usage: 105644 KB
+Fuse CPU Usage: 639 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -58,5 +58,5 @@ Compiling architecture behavior of entity test_minimips_bram
 Time Resolution for simulation is 1ps.
 Compiled 53 VHDL Units
 Built simulation executable Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_BRAM_isim_beh.exe
-Fuse Memory Usage: 130328 KB
-Fuse CPU Usage: 1013 ms
+Fuse Memory Usage: 130008 KB
+Fuse CPU Usage: 1294 ms
