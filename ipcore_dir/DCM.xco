@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Wed May 21 11:14:19 2014
+# Date: Wed May 21 15:50:30 2014
 #
 ##############################################################
 #
@@ -115,7 +115,7 @@ CSET dcm_clk_out5_port=CLK0
 CSET dcm_clk_out6_port=CLK0
 CSET dcm_clkdv_divide=2.0
 CSET dcm_clkfx_divide=1
-CSET dcm_clkfx_multiply=4
+CSET dcm_clkfx_multiply=2
 CSET dcm_clkgen_clk_out1_port=CLKFX
 CSET dcm_clkgen_clk_out2_port=CLKFX
 CSET dcm_clkgen_clk_out3_port=CLKFX
@@ -190,7 +190,7 @@ CSET mmcm_ref_jitter1=0.010
 CSET mmcm_ref_jitter2=0.010
 CSET mmcm_startup_wait=false
 CSET num_out_clks=1
-CSET override_dcm=false
+CSET override_dcm=true
 CSET override_dcm_clkgen=false
 CSET override_mmcm=false
 CSET override_pll=false
@@ -266,4 +266,4 @@ CSET use_status=false
 MISC pkg_timestamp=2012-05-10T12:44:55Z
 # END Extra information
 GENERATE
-# CRC: b97504f1
+# CRC: d1f4dd9e

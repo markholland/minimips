@@ -80,13 +80,13 @@ BEGIN
 		wait for CLK_IN1_period/2;
    end process;
  
-   CLK_OUT1_process :process
-   begin
-		CLK_OUT1 <= '0';
-		wait for CLK_OUT1_period/2;
-		CLK_OUT1 <= '1';
-		wait for CLK_OUT1_period/2;
-   end process;
+--   CLK_OUT1_process :process
+--   begin
+--		CLK_OUT1 <= '0';
+--		wait for CLK_OUT1_period/2;
+--		CLK_OUT1 <= '1';
+--		wait for CLK_OUT1_period/2;
+--   end process;
  
 
    -- Stimulus process
