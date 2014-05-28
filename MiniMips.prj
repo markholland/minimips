@@ -1,3 +1,4 @@
+vhdl work "ipcore_dir/DCM.vhd"
 vhdl work "ShiftRegister2.vhd"
 vhdl work "Registers.vhd"
 vhdl work "PC.vhd"

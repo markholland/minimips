@@ -1,6 +1,9 @@
-set -tmpdir "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/xst/projnav.tmp"
-set -xsthdpdir "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn MiniMips.prj
+-ofn MiniMips
+-ofmt NGC
 -p xc6slx16-3-csg324
 -top MiniMips
 -opt_mode Speed
@@ -48,4 +51,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn MiniMips.prj

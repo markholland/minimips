@@ -285,7 +285,7 @@ begin
 	inst_memory : Memory
 	port map(
 				clk_i => clk_global,
-				en => clk_global, --Use auxClockDivider_global, with FPGA
+				en => auxClockDivider_global, --clk_global, Use auxClockDivider_global, with FPGA
 				address => auxMux1out,
 				WriteData => auxBout,
 				MemData => auxMemData,
@@ -473,30 +473,30 @@ begin
             leds_n_o => display_n_o
 	);
 	
-	instClockDivider1 : ClockDivisorN
-	generic map (DIVIDE => 2)
-   port map ( 
-			    clk_i => clk_global,
-             clk_div_o => auxClockDivider1
-	);
+--	instClockDivider1 : ClockDivisorN
+--	generic map (DIVIDE => 2)
+--   port map ( 
+--			    clk_i => clk_global,
+--             clk_div_o => auxClockDivider1
+--	);
 	
 	-- Comment above and un comment below when using on FPGA, 
 	-- memory enable must also be changed higher up in this file.
 	
---	instClockDivider1 : ClockDivisorN
---	generic map (DIVIDE => 2)
---   port map ( 
---			  clk_i => auxClockDivider_global,
---           clk_div_o => auxClockDivider1			-- Everything but memory uses this clock
---	);
---	
---	
---	instClockDivider3 : ClockDivisorN
---	generic map (DIVIDE => 500000)
---   port map ( 
---			  clk_i => clk_global,
---           clk_div_o => auxClockDivider_global  -- Memory uses this clock directly
---	);
+	instClockDivider1 : ClockDivisorN
+	generic map (DIVIDE => 2)
+   port map ( 
+			  clk_i => auxClockDivider_global,
+           clk_div_o => auxClockDivider1			-- Everything but memory uses this clock
+	);
+	
+	
+	instClockDivider3 : ClockDivisorN
+	generic map (DIVIDE => 500000)
+   port map ( 
+			  clk_i => clk_global,
+           clk_div_o => auxClockDivider_global  -- Memory uses this clock directly
+	);
 	
 	instClockDivider2 : ClockDivisorN
 	generic map (DIVIDE => 2500)
