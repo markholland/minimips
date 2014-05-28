@@ -1,32 +1,10 @@
 Command line:
    test_MiniMips_BRAM_isim_beh.exe
      -simmode  gui
-     -simrunnum  2
-     -socket  49860
+     -simrunnum  0
+     -socket  49877
 
-Wed May 21 17:19:01 2014
+Thu May 22 12:24:32 2014
 
 
- Elaboration Time: 0.078001 sec
-
- Current Memory Usage: 650.654 Meg
-
- Total Signals          : 418
- Total Nets             : 2893
- Total Signal Drivers   : 131
- Total Blocks           : 42
- Total Primitive Blocks : 33
- Total Processes        : 77
- Total Traceable Variables  : 240
- Total Scalar Nets and Variables : 4371
-Total Line Count : 625
-Total Line Count : 625
-Total Line Count : 625
-Total Line Count : 625
-
- Total Simulation Time: 0.312003 sec
-
- Current Memory Usage: 966.275 Meg
-
-Wed May 21 17:19:47 2014
-
+ Elaboration Time: 0.093601 sec
