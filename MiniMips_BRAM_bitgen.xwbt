@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.ncd
+OUTFILE=Z:\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=Z:\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5
+LICENSE=WebPack
+USER_INFO=210742988_0_0_676
