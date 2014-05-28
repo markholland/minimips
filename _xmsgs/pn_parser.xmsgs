@@ -8,7 +8,64 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/ALU.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/ALUControl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/ClockDivider.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/ClockDivisorN.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Control.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Control_BRAM.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Display7Segments.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/DisplaysManager.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Instr_Register.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MemDataReg.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Memory.vhd&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips_BRAM.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Multiplexer2.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Multiplexer4.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MyBuffer.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/PC.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/Registers.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/ShiftRegister2.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_ClockDivisorN.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

@@ -3,3 +3,5 @@ ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MiniMips.ucf -p
 map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MiniMips_BRAM_map.ncd MiniMips_BRAM.ngd MiniMips_BRAM.pcf 
 par -w -intstyle ise -ol high -mt off MiniMips_BRAM_map.ncd MiniMips_BRAM.ncd MiniMips_BRAM.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MiniMips_BRAM.twx MiniMips_BRAM.ncd -o MiniMips_BRAM.twr MiniMips_BRAM.pcf -ucf MiniMips.ucf 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips_BRAM.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips_BRAM.syr" 
+xst -intstyle ise -ifn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips_BRAM.xst" -ofn "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips_BRAM.syr" 

@@ -84,6 +84,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="MiniMips_BRAM.unroutes" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="MiniMips_BRAM.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="MiniMips_BRAM.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MiniMips_BRAM_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="MiniMips_BRAM_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MiniMips_BRAM_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MiniMips_BRAM_map.mrp" xil_pn:subbranch="Map"/>
@@ -94,9 +95,11 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="MiniMips_BRAM_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="MiniMips_BRAM_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MiniMips_BRAM_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MiniMips_BRAM_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="MiniMips_BRAM_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="MiniMips_BRAM_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MiniMips_BRAM_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MiniMips_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="MiniMips_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MiniMips_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MiniMips_map.mrp" xil_pn:subbranch="Map"/>
@@ -175,9 +178,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1400754256" xil_pn:in_ck="-4325334741112038581" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1400754256">
+    <transform xil_pn:end_ts="1401272350" xil_pn:in_ck="-4325334741112038581" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1401272350">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.vhd"/>
       <outfile xil_pn:name="ALUControl.vhd"/>
       <outfile xil_pn:name="ClockDivider.vhd"/>
@@ -218,15 +225,21 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1400754257" xil_pn:in_ck="7042302770535277084" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-9210576199894750157" xil_pn:start_ts="1400754256">
+    <transform xil_pn:end_ts="1401272018" xil_pn:in_ck="7042302770535277084" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-9210576199894750157" xil_pn:start_ts="1401272017">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <outfile xil_pn:name="ipcore_dir/memory_BRAM.ngc"/>
       <outfile xil_pn:name="ipcore_dir/memory_BRAM.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1400754257" xil_pn:in_ck="-355675982386773948" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1400754257">
+    <transform xil_pn:end_ts="1401272351" xil_pn:in_ck="-355675982386773948" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1401272350">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.vhd"/>
       <outfile xil_pn:name="ALUControl.vhd"/>
       <outfile xil_pn:name="ClockDivider.vhd"/>
@@ -260,9 +273,15 @@
       <outfile xil_pn:name="test_ShiftRegister2.vhd"/>
       <outfile xil_pn:name="test_minimips.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1400754270" xil_pn:in_ck="-4349133546102776041" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2260164173907020632" xil_pn:start_ts="1400754257">
+    <transform xil_pn:end_ts="1401272366" xil_pn:in_ck="-4349133546102776041" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2260164173907020632" xil_pn:start_ts="1401272351">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
@@ -270,9 +289,13 @@
       <outfile xil_pn:name="test_MiniMips_BRAM_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1400754271" xil_pn:in_ck="2249207714678909492" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8700860168035995675" xil_pn:start_ts="1400754270">
+    <transform xil_pn:end_ts="1401272367" xil_pn:in_ck="-7912787060986730378" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8700860168035995675" xil_pn:start_ts="1401272366">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="test_MiniMips_BRAM_isim_beh.wdb"/>
@@ -281,12 +304,53 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1400668357" xil_pn:in_ck="4992979461519082721" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1589717457205185755" xil_pn:start_ts="1400668357">
+    <transform xil_pn:end_ts="1401272502" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3107270955261191197" xil_pn:start_ts="1401272502">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1401272502" xil_pn:in_ck="7042302770535277084" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="166170075566771858" xil_pn:start_ts="1401272502">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/DCM.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/memory_BRAM.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/memory_BRAM.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1401272502" xil_pn:in_ck="-3844738543602188166" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1401272502">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1401272502" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-183428842627540635" xil_pn:start_ts="1401272502">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1401272502" xil_pn:in_ck="-3844738543602188166" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1401272502">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1401272502" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="8662803361083438364" xil_pn:start_ts="1401272502">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1401272571" xil_pn:in_ck="793244265636344254" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4506436088143105237" xil_pn:start_ts="1401272538">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="MiniMips.lso"/>
+      <outfile xil_pn:name="MiniMips.ngc"/>
+      <outfile xil_pn:name="MiniMips.ngr"/>
+      <outfile xil_pn:name="MiniMips.prj"/>
+      <outfile xil_pn:name="MiniMips.syr"/>
+      <outfile xil_pn:name="MiniMips.xst"/>
+      <outfile xil_pn:name="MiniMips_BRAM.prj"/>
+      <outfile xil_pn:name="MiniMips_stx_beh.prj"/>
+      <outfile xil_pn:name="MiniMips_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1401272572" xil_pn:in_ck="4992979461519082721" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5794458627500535302" xil_pn:start_ts="1401272571">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
   </transforms>
 

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-05-18T23:15:22</DateModified>
+  <DateModified>2014-05-28T12:23:42</DateModified>
   <ModuleName>MiniMips</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/iseconfig/MiniMips.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5\</ImplementationReportsDirectory>
   <DateInitialized>2014-05-18T23:15:22</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

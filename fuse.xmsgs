@@ -5,37 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 276: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips_BRAM.vhd" Line 273: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 297: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 311: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 320: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 351: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 365: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 374: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 419: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 428: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 449: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips.vhd" Line 470: Actual for formal port <arg fmt="%s" index="1">en_i</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/MiniMips_BRAM.vhd" Line 293: Actual for formal port <arg fmt="%s" index="1">clka</arg> is neither a static name nor a globally static expression
 </msg>
 
 </messages>

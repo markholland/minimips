@@ -273,7 +273,7 @@ begin
 	inst_pc : PC
 	port map(
 				clk_i => clk_global,
-				en => clk_global and auxDCMLock,
+				en => auxDCMLock,
 			   reset => reset_global,
             PCEn => auxPCEn,
             pc_in => auxMUX6out,
@@ -294,7 +294,7 @@ begin
 	inst_memory : Memory
 	port map(
 				clk_i => clk_global,
-				en => auxClockDivider_global and auxDCMLock, --clk_global, --Use auxClockDivider_global, with FPGA
+				en => auxDCMLock, --clk_global, --Use auxClockDivider_global, with FPGA
 				address => auxMux1out,
 				WriteData => auxBout,
 				MemData => auxMemData,
@@ -308,7 +308,7 @@ begin
 	inst_memDataReg : MemDataReg
    port map(
 				clk_i => clk_global,
-				en => clk_global and auxDCMLock,
+				en => auxDCMLock,
             reset => reset_global,
             data_in => auxMemData,
             data_out => auxMemDataRegout
@@ -317,7 +317,7 @@ begin
 	inst_instrReg : Instr_Register
    port map( 
 			   clk_i => clk_global,
-				en => clk_global and auxDCMLock,
+				en => auxDCMLock,
             reset => reset_global,
 			   IRWrite => auxIRWrite,
 			   instr_in => auxMemData,
@@ -348,7 +348,7 @@ begin
 	inst_Registers : Registers
 	port map( 
 				clk_i => clk_global,
-				en => clk_global and auxDCMLock,
+				en => auxDCMLock,
             reset => reset_global,
             RegWrite => auxRegWrite,
             ReadRegister1 => auxInstr2out,
@@ -362,7 +362,7 @@ begin
 	inst_A : MyBuffer
 	port map(
 				clk_i => clk_global,
-				en => clk_global and auxDCMLock,
+				en => auxDCMLock,
             reset => reset_global,
             buf_in => auxReadData1,
             buf_out => auxAout
@@ -371,7 +371,7 @@ begin
 	inst_B : MyBuffer
 	port map(
 				clk_i => clk_global,
-				en => clk_global and auxDCMLock,
+				en => auxDCMLock,
             reset => reset_global,
             buf_in => auxReadData2,
             buf_out => auxBout
@@ -416,7 +416,7 @@ begin
 	inst_ALUOut : MyBuffer
 	port map(
 				clk_i => clk_global,
-				en => clk_global and auxDCMLock,
+				en => auxDCMLock,
             reset => reset_global,
             buf_in => auxALUResult,
             buf_out => auxALUout
@@ -425,7 +425,7 @@ begin
 	inst_ShiftLeft2 : ShiftRegister2
 	port map(
 				clk_i => clk_global,
-				en => clk_global and auxDCMLock,
+				en => auxDCMLock,
 			   reset => reset_global,
             bit_i => auxInstr0out(5 downto 0),
             bit_o => auxShiftLeft2
@@ -446,7 +446,7 @@ begin
 	port map(
 	         clk_i => clk_global,
 			   reset => reset_global,
-			   en => clk_global and auxDCMLock,
+			   en => auxDCMLock,
 			   Op => auxInstr3out,
             PCWriteCond => auxPCWriteCond,
             PCWrite => auxPCWrite,
@@ -467,7 +467,7 @@ begin
 	port map(
 				rst_i => reset_global,
             clk_i => clk_global,
-            en_i => clk_global and auxDCMLock,
+            en_i => auxClockDivider2,
             a_i => auxPort0(3 downto 0),
             b_i => auxPort1(3 downto 0),
             c_i => auxPort2(3 downto 0),

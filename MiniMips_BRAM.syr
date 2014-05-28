@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: MiniMips_BRAM.prj
 
@@ -108,6 +108,9 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ipcore_dir\DCM.vhd" into library work
+Parsing entity <DCM>.
+Parsing architecture <xilinx> of entity <dcm>.
 Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ipcore_dir\memory_BRAM.vhd" into library work
 Parsing entity <memory_BRAM>.
 Parsing architecture <memory_BRAM_a> of entity <memory_bram>.
@@ -156,12 +159,16 @@ Parsing architecture <Behavioral> of entity <alu>.
 Parsing VHDL file "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" into library work
 Parsing entity <MiniMips_BRAM>.
 Parsing architecture <Structural> of entity <minimips_bram>.
+WARNING:HDLCompiler:946 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 273: Actual for formal port en is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 293: Actual for formal port clka is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
 Elaborating entity <MiniMips_BRAM> (architecture <Structural>) from library <work>.
+
+Elaborating entity <DCM> (architecture <xilinx>) from library <work>.
 
 Elaborating entity <PC> (architecture <Behavioral>) from library <work>.
 
@@ -201,13 +208,10 @@ WARNING:HDLCompiler:92 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx P
 Elaborating entity <Display7Segments> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <ClockDivisorN> (architecture <Behavioral>) with generics from library <work>.
-
-Elaborating entity <ClockDivisorN> (architecture <Behavioral>) with generics from library <work>.
-
-Elaborating entity <ClockDivisorN> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:634 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 235: Net <auxPort0[3]> does not have a driver.
-WARNING:HDLCompiler:634 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 236: Net <auxPort1[3]> does not have a driver.
-WARNING:HDLCompiler:634 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 237: Net <auxPort2[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 241: Net <auxPort0[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 242: Net <auxPort1[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" Line 243: Net <auxPort2[3]> does not have a driver.
+WARNING:Xst:2972 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" line 503. All outputs of instance <instClockDivider2> of block <ClockDivisorN> are unconnected in block <MiniMips_BRAM>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -215,13 +219,20 @@ WARNING:HDLCompiler:634 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx 
 
 Synthesizing Unit <MiniMips_BRAM>.
     Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd".
-INFO:Xst:3210 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" line 412: Output port <MemRead> of the instance <inst_control> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" line 438: Output port <MemRead> of the instance <inst_control> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\MiniMips_BRAM.vhd" line 503: Output port <clk_div_o> of the instance <instClockDivider2> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <auxPort0<3:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <auxPort1<3:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <auxPort2<3:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <MiniMips_BRAM> synthesized.
+
+Synthesizing Unit <DCM>.
+    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ipcore_dir\DCM.vhd".
+    Summary:
+	no macro.
+Unit <DCM> synthesized.
 
 Synthesizing Unit <PC>.
     Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\PC.vhd".
@@ -274,8 +285,8 @@ Synthesizing Unit <Registers>.
     Found 8-bit register for signal <register6>.
     Found 8-bit register for signal <register7>.
     Found 8-bit register for signal <register0>.
-    Found 8-bit register for signal <ReadRegister1[4]_dff_26_OUT>.
-    Found 8-bit register for signal <ReadRegister2[4]_dff_28_OUT>.
+    Found 8-bit register for signal <ReadRegister1[4]_dff_34_OUT>.
+    Found 8-bit register for signal <ReadRegister2[4]_dff_36_OUT>.
     Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_36>.
     Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_37>.
     Found 1-bit register for signal <ReadRegister1[4]_clk_i_DFF_38>.
@@ -292,26 +303,26 @@ Synthesizing Unit <Registers>.
     Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_49>.
     Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_50>.
     Found 1-bit register for signal <ReadRegister2[4]_clk_i_DFF_51>.
-    Found 32x1-bit Read Only RAM for signal <ReadRegister1[4]_GND_12_o_Mux_31_o>
-    Found 32x1-bit Read Only RAM for signal <ReadRegister2[4]_GND_28_o_Mux_47_o>
-    Found 8-bit 8-to-1 multiplexer for signal <_n0196> created at line 92.
-    Found 8-bit 8-to-1 multiplexer for signal <_n0192> created at line 113.
-    Found 1-bit tristate buffer for signal <ReadData1<7>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData1<6>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData1<5>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData1<4>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData1<3>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData1<2>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData1<1>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData1<0>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData2<7>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData2<6>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData2<5>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData2<4>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData2<3>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData2<2>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData2<1>> created at line 57
-    Found 1-bit tristate buffer for signal <ReadData2<0>> created at line 57
+    Found 32x1-bit Read Only RAM for signal <ReadRegister1[4]_GND_22_o_Mux_39_o>
+    Found 32x1-bit Read Only RAM for signal <ReadRegister2[4]_GND_38_o_Mux_55_o>
+    Found 8-bit 8-to-1 multiplexer for signal <_n0212> created at line 95.
+    Found 8-bit 8-to-1 multiplexer for signal <_n0190> created at line 116.
+    Found 1-bit tristate buffer for signal <ReadData1<7>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData1<6>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData1<5>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData1<4>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData1<3>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData1<2>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData1<1>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData1<0>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData2<7>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData2<6>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData2<5>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData2<4>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData2<3>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData2<2>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData2<1>> created at line 58
+    Found 1-bit tristate buffer for signal <ReadData2<0>> created at line 58
     Summary:
 	inferred   2 RAM(s).
 	inferred  96 D-type flip-flop(s).
@@ -367,7 +378,7 @@ Synthesizing Unit <Control_BRAM>.
     | States             | 14                                             |
     | Transitions        | 37                                             |
     | Inputs             | 9                                              |
-    | Outputs            | 18                                             |
+    | Outputs            | 19                                             |
     | Clock              | clk_i (rising_edge)                            |
     | Reset              | reset (positive)                               |
     | Reset type         | asynchronous                                   |
@@ -408,39 +419,6 @@ Synthesizing Unit <Display7Segments>.
 	inferred   1 RAM(s).
 Unit <Display7Segments> synthesized.
 
-Synthesizing Unit <ClockDivisorN_1>.
-    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ClockDivisorN.vhd".
-        DIVIDE = 2
-    Found 1-bit register for signal <clk_div_o>.
-    Found 1-bit register for signal <count>.
-    Found 1-bit adder for signal <count[0]_PWR_56_o_add_1_OUT<0>> created at line 51.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   2 D-type flip-flop(s).
-Unit <ClockDivisorN_1> synthesized.
-
-Synthesizing Unit <ClockDivisorN_2>.
-    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ClockDivisorN.vhd".
-        DIVIDE = 500000
-    Found 1-bit register for signal <clk_div_o>.
-    Found 19-bit register for signal <count>.
-    Found 19-bit adder for signal <count[18]_GND_74_o_add_1_OUT> created at line 51.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  20 D-type flip-flop(s).
-Unit <ClockDivisorN_2> synthesized.
-
-Synthesizing Unit <ClockDivisorN_3>.
-    Related source file is "\\psf\home\Dropbox\UNI 13-14\2nd Semester\Dsd\Xilinx Projects\Lab5\ClockDivisorN.vhd".
-        DIVIDE = 2500
-    Found 1-bit register for signal <clk_div_o>.
-    Found 12-bit register for signal <count>.
-    Found 12-bit adder for signal <count[11]_GND_75_o_add_1_OUT> created at line 51.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  13 D-type flip-flop(s).
-Unit <ClockDivisorN_3> synthesized.
-
 =========================================================================
 HDL Synthesis Report
 
@@ -448,17 +426,12 @@ Macro Statistics
 # RAMs                                                 : 3
  16x7-bit single-port Read Only RAM                    : 1
  32x1-bit single-port Read Only RAM                    : 2
-# Adders/Subtractors                                   : 5
- 1-bit adder                                           : 1
- 12-bit adder                                          : 1
- 19-bit adder                                          : 1
+# Adders/Subtractors                                   : 2
  8-bit adder                                           : 1
  8-bit subtractor                                      : 1
-# Registers                                            : 45
- 1-bit register                                        : 20
- 12-bit register                                       : 1
+# Registers                                            : 39
+ 1-bit register                                        : 16
  16-bit register                                       : 1
- 19-bit register                                       : 1
  5-bit register                                        : 2
  6-bit register                                        : 1
  8-bit register                                        : 19
@@ -483,8 +456,8 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 
 Reading core <ipcore_dir/memory_BRAM.ngc>.
 Loading core <memory_BRAM> for timing and area information for instance <inst_memory>.
-INFO:Xst:2261 - The FF/Latch <ReadRegister1[4]_clk_i_DFF_37> in Unit <inst_Registers> is equivalent to the following 7 FFs/Latches, which will be removed : <ReadRegister1[4]_clk_i_DFF_36> <ReadRegister1[4]_clk_i_DFF_40> <ReadRegister1[4]_clk_i_DFF_38> <ReadRegister1[4]_clk_i_DFF_39> <ReadRegister1[4]_clk_i_DFF_43> <ReadRegister1[4]_clk_i_DFF_41> <ReadRegister1[4]_clk_i_DFF_42> 
 INFO:Xst:2261 - The FF/Latch <ReadRegister2[4]_clk_i_DFF_46> in Unit <inst_Registers> is equivalent to the following 7 FFs/Latches, which will be removed : <ReadRegister2[4]_clk_i_DFF_44> <ReadRegister2[4]_clk_i_DFF_45> <ReadRegister2[4]_clk_i_DFF_49> <ReadRegister2[4]_clk_i_DFF_47> <ReadRegister2[4]_clk_i_DFF_48> <ReadRegister2[4]_clk_i_DFF_50> <ReadRegister2[4]_clk_i_DFF_51> 
+INFO:Xst:2261 - The FF/Latch <ReadRegister1[4]_clk_i_DFF_37> in Unit <inst_Registers> is equivalent to the following 7 FFs/Latches, which will be removed : <ReadRegister1[4]_clk_i_DFF_36> <ReadRegister1[4]_clk_i_DFF_40> <ReadRegister1[4]_clk_i_DFF_38> <ReadRegister1[4]_clk_i_DFF_39> <ReadRegister1[4]_clk_i_DFF_43> <ReadRegister1[4]_clk_i_DFF_41> <ReadRegister1[4]_clk_i_DFF_42> 
 INFO:Xst:2261 - The FF/Latch <bit_o_0> in Unit <inst_ShiftLeft2> is equivalent to the following FF/Latch, which will be removed : <bit_o_1> 
 WARNING:Xst:1710 - FF/Latch <bit_o_0> (without init value) has a constant value of 0 in block <inst_ShiftLeft2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <input0_2> of sequential type is unconnected in block <inst_instrReg>.
@@ -503,18 +476,6 @@ WARNING:Xst:2677 - Node <aux1_8> of sequential type is unconnected in block <ins
 WARNING:Xst:2677 - Node <aux1_9> of sequential type is unconnected in block <inst_instrReg>.
 WARNING:Xst:2677 - Node <aux1_10> of sequential type is unconnected in block <inst_instrReg>.
 
-Synthesizing (advanced) Unit <ClockDivisorN_1>.
-The following registers are absorbed into counter <count_0>: 1 register on signal <count_0>.
-Unit <ClockDivisorN_1> synthesized (advanced).
-
-Synthesizing (advanced) Unit <ClockDivisorN_2>.
-The following registers are absorbed into counter <count>: 1 register on signal <count>.
-Unit <ClockDivisorN_2> synthesized (advanced).
-
-Synthesizing (advanced) Unit <ClockDivisorN_3>.
-The following registers are absorbed into counter <count>: 1 register on signal <count>.
-Unit <ClockDivisorN_3> synthesized (advanced).
-
 Synthesizing (advanced) Unit <Display7Segments>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_leds_n_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
@@ -530,7 +491,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_leds_n_o> will be implemented on LUT
 Unit <Display7Segments> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Registers>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ReadRegister1[4]_GND_12_o_Mux_31_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ReadRegister1[4]_GND_22_o_Mux_39_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -541,7 +502,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ReadRegister1[4]_GND_12_o_Mux_31_o> 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ReadRegister2[4]_GND_28_o_Mux_47_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ReadRegister2[4]_GND_38_o_Mux_55_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -573,12 +534,8 @@ Macro Statistics
 # Adders/Subtractors                                   : 2
  8-bit adder                                           : 1
  8-bit subtractor                                      : 1
-# Counters                                             : 3
- 1-bit up counter                                      : 1
- 12-bit up counter                                     : 1
- 19-bit up counter                                     : 1
-# Registers                                            : 194
- Flip-Flops                                            : 194
+# Registers                                            : 191
+ Flip-Flops                                            : 191
 # Comparators                                          : 1
  8-bit comparator greater                              : 1
 # Multiplexers                                         : 35
@@ -596,8 +553,8 @@ Macro Statistics
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <bit_o_0> (without init value) has a constant value of 0 in block <ShiftRegister2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bit_o_1> (without init value) has a constant value of 0 in block <ShiftRegister2>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <ReadRegister1[4]_clk_i_DFF_37> in Unit <Registers> is equivalent to the following 7 FFs/Latches, which will be removed : <ReadRegister1[4]_clk_i_DFF_36> <ReadRegister1[4]_clk_i_DFF_40> <ReadRegister1[4]_clk_i_DFF_38> <ReadRegister1[4]_clk_i_DFF_39> <ReadRegister1[4]_clk_i_DFF_43> <ReadRegister1[4]_clk_i_DFF_41> <ReadRegister1[4]_clk_i_DFF_42> 
 INFO:Xst:2261 - The FF/Latch <ReadRegister2[4]_clk_i_DFF_46> in Unit <Registers> is equivalent to the following 7 FFs/Latches, which will be removed : <ReadRegister2[4]_clk_i_DFF_44> <ReadRegister2[4]_clk_i_DFF_45> <ReadRegister2[4]_clk_i_DFF_49> <ReadRegister2[4]_clk_i_DFF_47> <ReadRegister2[4]_clk_i_DFF_48> <ReadRegister2[4]_clk_i_DFF_50> <ReadRegister2[4]_clk_i_DFF_51> 
+INFO:Xst:2261 - The FF/Latch <ReadRegister1[4]_clk_i_DFF_37> in Unit <Registers> is equivalent to the following 7 FFs/Latches, which will be removed : <ReadRegister1[4]_clk_i_DFF_36> <ReadRegister1[4]_clk_i_DFF_40> <ReadRegister1[4]_clk_i_DFF_38> <ReadRegister1[4]_clk_i_DFF_39> <ReadRegister1[4]_clk_i_DFF_43> <ReadRegister1[4]_clk_i_DFF_41> <ReadRegister1[4]_clk_i_DFF_42> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <FSM_1> on signal <currentDisplay[1:2]> with gray encoding.
 ----------------------
@@ -630,13 +587,13 @@ Optimizing FSM <FSM_0> on signal <estado_actual[1:4]> with sequential encoding.
 ----------------------
 WARNING:Xst:2042 - Unit Registers: 16 internal tristates are replaced by logic (pull-up yes): ReadData1<0>, ReadData1<1>, ReadData1<2>, ReadData1<3>, ReadData1<4>, ReadData1<5>, ReadData1<6>, ReadData1<7>, ReadData2<0>, ReadData2<1>, ReadData2<2>, ReadData2<3>, ReadData2<4>, ReadData2<5>, ReadData2<6>, ReadData2<7>.
 
-Optimizing unit <MyBuffer> ...
-
-Optimizing unit <PC> ...
-
 Optimizing unit <MemDataReg> ...
 
+Optimizing unit <MyBuffer> ...
+
 Optimizing unit <MiniMips_BRAM> ...
+
+Optimizing unit <PC> ...
 
 Optimizing unit <Instr_Register> ...
 
@@ -649,321 +606,198 @@ WARNING:Xst:2677 - Node <inst_instrReg/aux1_8> of sequential type is unconnected
 WARNING:Xst:2677 - Node <inst_instrReg/input2_2> of sequential type is unconnected in block <MiniMips_BRAM>.
 WARNING:Xst:2677 - Node <inst_instrReg/input2_1> of sequential type is unconnected in block <MiniMips_BRAM>.
 WARNING:Xst:2677 - Node <inst_instrReg/input2_0> of sequential type is unconnected in block <MiniMips_BRAM>.
-INFO:Xst:2261 - The FF/Latch <instClockDivider2/count_0> in Unit <MiniMips_BRAM> is equivalent to the following FF/Latch, which will be removed : <instClockDivider3/count_0> 
-INFO:Xst:2261 - The FF/Latch <instClockDivider2/count_1> in Unit <MiniMips_BRAM> is equivalent to the following FF/Latch, which will be removed : <instClockDivider3/count_1> 
 
 Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block MiniMips_BRAM, actual ratio is 4.
-FlipFlop inst_control/estado_actual_FSM_FFd1 has been replicated 4 time(s)
-FlipFlop inst_control/estado_actual_FSM_FFd2 has been replicated 4 time(s)
-FlipFlop inst_control/estado_actual_FSM_FFd3 has been replicated 4 time(s)
-FlipFlop inst_control/estado_actual_FSM_FFd4 has been replicated 4 time(s)
-
-Final Macro Processing ...
-
-=========================================================================
-Final Register Report
-
-Macro Statistics
-# Registers                                            : 224
- Flip-Flops                                            : 224
-
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Design Summary                             *
-=========================================================================
-
-Top Level Output File Name         : MiniMips_BRAM.ngc
-
-Primitive and Black Box Usage:
-------------------------------
-# BELS                             : 352
-#      GND                         : 2
-#      INV                         : 4
-#      LUT1                        : 29
-#      LUT2                        : 34
-#      LUT3                        : 11
-#      LUT4                        : 36
-#      LUT5                        : 29
-#      LUT6                        : 116
-#      MUXCY                       : 43
-#      MUXF7                       : 1
-#      VCC                         : 2
-#      XORCY                       : 45
-# FlipFlops/Latches                : 224
-#      FD                          : 20
-#      FDC                         : 68
-#      FDCE                        : 93
-#      FDE                         : 14
-#      FDR                         : 29
-# RAMS                             : 1
-#      RAMB8BWER                   : 1
-# Clock Buffers                    : 2
-#      BUFG                        : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 12
-#      IBUF                        : 1
-#      OBUF                        : 11
-
-Device utilization summary:
----------------------------
-
-Selected Device : 6slx16csg324-3 
-
-
-Slice Logic Utilization: 
- Number of Slice Registers:             224  out of  18224     1%  
- Number of Slice LUTs:                  259  out of   9112     2%  
-    Number used as Logic:               259  out of   9112     2%  
-
-Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    380
-   Number with an unused Flip Flop:     156  out of    380    41%  
-   Number with an unused LUT:           121  out of    380    31%  
-   Number of fully used LUT-FF pairs:   103  out of    380    27%  
-   Number of unique control sets:        23
-
-IO Utilization: 
- Number of IOs:                          13
- Number of bonded IOBs:                  13  out of    232     5%  
-
-Specific Feature Utilization:
- Number of Block RAM/FIFO:                1  out of     32     3%  
-    Number using Block RAM only:          1
- Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-Timing Report
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
------------------------------------+----------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)            | Load  |
------------------------------------+----------------------------------+-------+
-clk_global                         | BUFGP                            | 50    |
-instClockDivider1/clk_div_o        | BUFG                             | 173   |
-instClockDivider3/clk_div_o        | NONE(instClockDivider1/clk_div_o)| 2     |
------------------------------------+----------------------------------+-------+
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
-
-Asynchronous Control Signals Information:
-----------------------------------------
-No asynchronous control signals found in this design
-
-Timing Summary:
----------------
-Speed Grade: -3
-
-   Minimum period: 5.975ns (Maximum Frequency: 167.371MHz)
-   Minimum input arrival time before clock: 4.842ns
-   Maximum output required time after clock: 4.649ns
-   Maximum combinational path delay: No path found
-
-Timing Details:
----------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk_global'
-  Clock period: 4.103ns (frequency: 243.724MHz)
-  Total number of paths / destination ports: 777 / 70
--------------------------------------------------------------------------
-Delay:               4.103ns (Levels of Logic = 2)
-  Source:            instClockDivider3/count_15 (FF)
-  Destination:       instClockDivider3/count_2 (FF)
-  Source Clock:      clk_global rising
-  Destination Clock: clk_global rising
-
-  Data Path: instClockDivider3/count_15 to instClockDivider3/count_2
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              2   0.447   0.961  instClockDivider3/count_15 (instClockDivider3/count_15)
-     LUT5:I0->O            1   0.203   0.808  instClockDivider3/PWR_57_o_count[18]_equal_1_o<18>1 (instClockDivider3/PWR_57_o_count[18]_equal_1_o<18>)
-     LUT5:I2->O           18   0.205   1.049  instClockDivider3/PWR_57_o_count[18]_equal_1_o<18>4 (instClockDivider3/PWR_57_o_count[18]_equal_1_o)
-     FDR:R                     0.430          instClockDivider3/count_2
-    ----------------------------------------
-    Total                      4.103ns (1.285ns logic, 2.818ns route)
-                                       (31.3% logic, 68.7% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'instClockDivider1/clk_div_o'
-  Clock period: 5.975ns (frequency: 167.371MHz)
-  Total number of paths / destination ports: 13933 / 241
--------------------------------------------------------------------------
-Delay:               5.975ns (Levels of Logic = 7)
-  Source:            inst_pc/actual_0 (FF)
-  Destination:       inst_pc/actual_4 (FF)
-  Source Clock:      instClockDivider1/clk_div_o rising
-  Destination Clock: instClockDivider1/clk_div_o rising
-
-  Data Path: inst_pc/actual_0 to inst_pc/actual_4
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              4   0.447   1.028  inst_pc/actual_0 (inst_pc/actual_0)
-     LUT6:I1->O            4   0.203   0.788  inst_mux4/Mmux_c_o11 (auxMux4out<0>)
-     LUT2:I0->O            1   0.203   0.000  inst_ALU/Msub_ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>_lut<0> (inst_ALU/Msub_ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  inst_ALU/Msub_ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>_cy<0> (inst_ALU/Msub_ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>_cy<0>)
-     XORCY:CI->O           3   0.180   0.755  inst_ALU/Msub_ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<7:0>_xor<1> (inst_ALU/ALUSrcA[7]_ALUSrcB[7]_sub_3_OUT<1>)
-     LUT4:I2->O            1   0.203   0.580  auxPCEn5 (auxPCEn5)
-     LUT6:I5->O            8   0.205   0.907  auxPCEn6 (auxPCEn6)
-     LUT6:I4->O            1   0.203   0.000  inst_pc/actual_4_rstpot (inst_pc/actual_4_rstpot)
-     FDC:D                     0.102          inst_pc/actual_4
-    ----------------------------------------
-    Total                      5.975ns (1.918ns logic, 4.057ns route)
-                                       (32.1% logic, 67.9% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'instClockDivider3/clk_div_o'
-  Clock period: 1.950ns (frequency: 512.794MHz)
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Delay:               1.950ns (Levels of Logic = 1)
-  Source:            instClockDivider1/count_0 (FF)
-  Destination:       instClockDivider1/count_0 (FF)
-  Source Clock:      instClockDivider3/clk_div_o rising
-  Destination Clock: instClockDivider3/clk_div_o rising
-
-  Data Path: instClockDivider1/count_0 to instClockDivider1/count_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.616  instClockDivider1/count_0 (instClockDivider1/count_0)
-     INV:I->O              1   0.206   0.579  instClockDivider1/count_0_rstpot_INV_0 (instClockDivider1/count_0_rstpot)
-     FD:D                      0.102          instClockDivider1/count_0
-    ----------------------------------------
-    Total                      1.950ns (0.755ns logic, 1.195ns route)
-                                       (38.7% logic, 61.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'instClockDivider1/clk_div_o'
-  Total number of paths / destination ports: 173 / 173
--------------------------------------------------------------------------
-Offset:              4.842ns (Levels of Logic = 2)
-  Source:            reset_global (PAD)
-  Destination:       inst_instrReg/input2_7 (FF)
-  Destination Clock: instClockDivider1/clk_div_o rising
-
-  Data Path: reset_global to inst_instrReg/input2_7
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O           181   1.222   2.381  reset_global_IBUF (reset_global_IBUF)
-     LUT5:I0->O            5   0.203   0.714  inst_instrReg/_n0100_inv1 (inst_instrReg/_n0100_inv)
-     FDE:CE                    0.322          inst_instrReg/input2_3
-    ----------------------------------------
-    Total                      4.842ns (1.747ns logic, 3.095ns route)
-                                       (36.1% logic, 63.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_global'
-  Total number of paths / destination ports: 18 / 18
--------------------------------------------------------------------------
-Offset:              3.688ns (Levels of Logic = 1)
-  Source:            reset_global (PAD)
-  Destination:       inst_dispManager/currentDisplay_FSM_FFd2 (FF)
-  Destination Clock: clk_global rising
-
-  Data Path: reset_global to inst_dispManager/currentDisplay_FSM_FFd2
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O           181   1.222   2.036  reset_global_IBUF (reset_global_IBUF)
-     FDC:CLR                   0.430          inst_dispManager/currentDisplay_FSM_FFd2
-    ----------------------------------------
-    Total                      3.688ns (1.652ns logic, 2.036ns route)
-                                       (44.8% logic, 55.2% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_global'
-  Total number of paths / destination ports: 8 / 4
--------------------------------------------------------------------------
-Offset:              4.649ns (Levels of Logic = 2)
-  Source:            inst_dispManager/currentDisplay_FSM_FFd1 (FF)
-  Destination:       en_n_o<3> (PAD)
-  Source Clock:      clk_global rising
-
-  Data Path: inst_dispManager/currentDisplay_FSM_FFd1 to en_n_o<3>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              6   0.447   0.849  inst_dispManager/currentDisplay_FSM_FFd1 (inst_dispManager/currentDisplay_FSM_FFd1)
-     LUT2:I0->O            1   0.203   0.579  inst_dispManager/currentDisplay_en_n_o<0>1 (en_n_o_0_OBUF)
-     OBUF:I->O                 2.571          en_n_o_0_OBUF (en_n_o<0>)
-    ----------------------------------------
-    Total                      4.649ns (3.221ns logic, 1.428ns route)
-                                       (69.3% logic, 30.7% route)
-
-=========================================================================
-
-Cross Clock Domains Report:
---------------------------
-
-Clock to Setup on destination clock clk_global
----------------------------+---------+---------+---------+---------+
-                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------------------+---------+---------+---------+---------+
-clk_global                 |    4.103|         |         |         |
-instClockDivider1/clk_div_o|    3.238|         |         |         |
----------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock instClockDivider1/clk_div_o
----------------------------+---------+---------+---------+---------+
-                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------------------+---------+---------+---------+---------+
-clk_global                 |    5.891|         |         |         |
-instClockDivider1/clk_div_o|    5.975|         |         |         |
-instClockDivider3/clk_div_o|    1.780|         |         |         |
----------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock instClockDivider3/clk_div_o
----------------------------+---------+---------+---------+---------+
-                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------------------+---------+---------+---------+---------+
-instClockDivider3/clk_div_o|    1.950|         |         |         |
----------------------------+---------+---------+---------+---------+
-
-=========================================================================
+ERROR:Xst:2035 - Port <clk_global> has illegal connections. This port is connected to an input buffer and other components.
+Input Buffer:
+   Port <I> of node <inst_DCM/clkin1_buf> (IBUFG) in unit <MiniMips_BRAM>
+Other Components:
+   Port <C> of node <inst_ShiftLeft2/bit_o_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ShiftLeft2/bit_o_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ShiftLeft2/bit_o_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ShiftLeft2/bit_o_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ShiftLeft2/bit_o_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ShiftLeft2/bit_o_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_control/estado_actual_FSM_FFd4> (FDC) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_dispManager/currentDisplay_FSM_FFd2> (FDC) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_dispManager/currentDisplay_FSM_FFd1> (FDC) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_control/estado_actual_FSM_FFd1> (FDC) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_control/estado_actual_FSM_FFd3> (FDC) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_control/estado_actual_FSM_FFd2> (FDC) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_pc/actual_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_pc/actual_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_pc/actual_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_pc/actual_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_pc/actual_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_pc/actual_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_pc/actual_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_pc/actual_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_memDataReg/aux_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_memDataReg/aux_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_memDataReg/aux_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_memDataReg/aux_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_memDataReg/aux_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_memDataReg/aux_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_memDataReg/aux_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_memDataReg/aux_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input0_0> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input0_1> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input1_0> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input1_1> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input1_2> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input1_3> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input1_4> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input2_3> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input2_4> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input2_5> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input2_6> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/input2_7> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux4_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux4_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux4_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux4_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux4_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux4_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux2_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux2_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux2_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux2_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux2_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux3_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux3_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux3_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux3_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux3_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_11> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_12> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_13> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_14> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_instrReg/aux1_15> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register3_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register3_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register3_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register3_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register3_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register3_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register3_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register3_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register1_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register1_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register1_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register1_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register1_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register1_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register1_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register1_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register2_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register2_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register2_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register2_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register2_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register2_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register2_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register2_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register6_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register6_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register6_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register6_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register6_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register6_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register6_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register6_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register4_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register4_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register4_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register4_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register4_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register4_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register4_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register4_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register5_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register5_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register5_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register5_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register5_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register5_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register5_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register5_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register7_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register7_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register7_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register7_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register7_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register7_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register7_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register7_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register0_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register0_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register0_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register0_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register0_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register0_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register0_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/register0_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadRegister1[4]_clk_i_DFF_37> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadRegister2[4]_clk_i_DFF_46> (FDE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData1_0> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData1_1> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData1_2> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData1_3> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData1_4> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData1_5> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData1_6> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData1_7> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData2_0> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData2_1> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData2_2> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData2_3> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData2_4> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData2_5> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData2_6> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_Registers/ReadData2_7> (FD) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ALUOut/aux_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ALUOut/aux_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ALUOut/aux_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ALUOut/aux_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ALUOut/aux_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ALUOut/aux_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ALUOut/aux_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_ALUOut/aux_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_B/aux_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_B/aux_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_B/aux_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_B/aux_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_B/aux_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_B/aux_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_B/aux_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_B/aux_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_A/aux_0> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_A/aux_1> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_A/aux_2> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_A/aux_3> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_A/aux_4> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_A/aux_5> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_A/aux_6> (FDCE) in unit <MiniMips_BRAM>
+   Port <C> of node <inst_A/aux_7> (FDCE) in unit <MiniMips_BRAM>
+   Port <I0> of node <inst_pc/_n0013_inv5> (LUT6) in unit <MiniMips_BRAM>
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.52 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.90 secs
  
 --> 
 
-Total memory usage is 197892 kilobytes
+Total memory usage is 205060 kilobytes
 
-Number of errors   :    0 (   0 filtered)
-Number of warnings :   44 (   0 filtered)
-Number of infos    :   13 (   0 filtered)
+Number of errors   :    1 (   0 filtered)
+Number of warnings :   47 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 
