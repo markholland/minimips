@@ -34,8 +34,8 @@ WARNING:HDLCompiler:946 - "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects
 Parsing VHDL file "Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_minimips.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 112748 KB
-Fuse CPU Usage: 717 ms
+Fuse Memory Usage: 113132 KB
+Fuse CPU Usage: 794 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -70,12 +70,11 @@ Compiling architecture comportamental of entity ShiftRegister2 [shiftregister2_d
 Compiling architecture comportamental of entity Control [control_default]
 Compiling architecture behavioral of entity DisplaysManager [displaysmanager_default]
 Compiling architecture behavioral of entity Display7Segments [display7segments_default]
-Compiling architecture behavioral of entity ClockDivisorN [\ClockDivisorN(1)\]
 Compiling architecture behavioral of entity ClockDivisorN [\ClockDivisorN(2500)\]
 Compiling architecture structural of entity MiniMips [minimips_default]
 Compiling architecture behavior of entity test_minimips
 Time Resolution for simulation is 1ps.
-Compiled 64 VHDL Units
+Compiled 62 VHDL Units
 Built simulation executable Z:/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx Projects/Lab5/test_MiniMips_isim_beh.exe
-Fuse Memory Usage: 145880 KB
-Fuse CPU Usage: 1762 ms
+Fuse Memory Usage: 146264 KB
+Fuse CPU Usage: 1668 ms

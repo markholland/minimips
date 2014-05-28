@@ -262,7 +262,7 @@ begin
 	port map(
 				CLK_IN1 => clk_global,
 				CLK_OUT1 => auxCLK_OUT1,
-				RESET => reset_global,
+				RESET => '0',
 				LOCKED => auxLOCKED
 	);
 

@@ -25,7 +25,7 @@ static const char *ng0 = "//psf/Home/Dropbox/UNI 13-14/2nd Semester/Dsd/Xilinx P
 
 
 
-static void work_a_3086534506_3212880686_p_0(char *t0)
+static void work_a_1274991756_3212880686_p_0(char *t0)
 {
     unsigned char t1;
     char *t2;
@@ -60,7 +60,7 @@ LAB2:    xsi_set_current_line(46, ng0);
     t4 = (t0 + 924U);
     t8 = *((char **)t4);
     t9 = *((int *)t8);
-    t10 = (1 - 1);
+    t10 = (2500 - 1);
     t11 = (t9 == t10);
     if (t11 != 0)
         goto LAB8;
@@ -110,9 +110,9 @@ LAB8:    xsi_set_current_line(47, ng0);
 }
 
 
-extern void work_a_3086534506_3212880686_init()
+extern void work_a_1274991756_3212880686_init()
 {
-	static char *pe[] = {(void *)work_a_3086534506_3212880686_p_0};
-	xsi_register_didat("work_a_3086534506_3212880686", "isim/test_MiniMips_isim_beh.exe.sim/work/a_3086534506_3212880686.didat");
+	static char *pe[] = {(void *)work_a_1274991756_3212880686_p_0};
+	xsi_register_didat("work_a_1274991756_3212880686", "isim/test_MiniMips_BRAM_isim_beh.exe.sim/work/a_1274991756_3212880686.didat");
 	xsi_register_executes(pe);
 }
