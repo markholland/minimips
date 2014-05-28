@@ -134,11 +134,9 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
-    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="minimips.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="minimips.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="minimips.drc" xil_pn:subbranch="FPGAConfiguration"/>
@@ -149,7 +147,6 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_ClockDivider_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_ClockDivisorN_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_Control_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_DCM_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_DCM_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_DCM_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_Instr_Register_beh.prj"/>
@@ -157,6 +154,7 @@
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_Instr_Register_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_Memory_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_MiniMips_BRAM_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_MiniMips_BRAM_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_MiniMips_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_Registers_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_Registers_stx_beh.prj"/>
@@ -171,11 +169,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1400753406" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1400753406">
+    <transform xil_pn:end_ts="1401260694" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1401260694">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1400753406" xil_pn:in_ck="-4325334741112038581" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1400753406">
+    <transform xil_pn:end_ts="1401260694" xil_pn:in_ck="4735295870450518322" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1401260694">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vhd"/>
@@ -188,6 +186,7 @@
       <outfile xil_pn:name="DisplaysManager.vhd"/>
       <outfile xil_pn:name="Instr_Register.vhd"/>
       <outfile xil_pn:name="MemDataReg.vhd"/>
+      <outfile xil_pn:name="MemToLED.vhd"/>
       <outfile xil_pn:name="Memory.vhd"/>
       <outfile xil_pn:name="MiniMips.vhd"/>
       <outfile xil_pn:name="MiniMips_BRAM.vhd"/>
@@ -210,21 +209,21 @@
       <outfile xil_pn:name="test_ShiftRegister2.vhd"/>
       <outfile xil_pn:name="test_minimips.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1400753406" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8279505763609227497" xil_pn:start_ts="1400753406">
+    <transform xil_pn:end_ts="1401260581" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7242723537243591356" xil_pn:start_ts="1401260581">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1400753406" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5335814361701562215" xil_pn:start_ts="1400753406">
+    <transform xil_pn:end_ts="1401260581" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1300011025526481094" xil_pn:start_ts="1401260581">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1400753407" xil_pn:in_ck="7042302770535277084" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-9210576199894750157" xil_pn:start_ts="1400753406">
+    <transform xil_pn:end_ts="1401260582" xil_pn:in_ck="7042302770535277084" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-9210576199894750157" xil_pn:start_ts="1401260581">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/memory_BRAM.ngc"/>
       <outfile xil_pn:name="ipcore_dir/memory_BRAM.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1400753407" xil_pn:in_ck="-355675982386773948" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1400753407">
+    <transform xil_pn:end_ts="1401260698" xil_pn:in_ck="8837491542661032171" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1401260698">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vhd"/>
@@ -237,6 +236,7 @@
       <outfile xil_pn:name="DisplaysManager.vhd"/>
       <outfile xil_pn:name="Instr_Register.vhd"/>
       <outfile xil_pn:name="MemDataReg.vhd"/>
+      <outfile xil_pn:name="MemToLED.vhd"/>
       <outfile xil_pn:name="Memory.vhd"/>
       <outfile xil_pn:name="MiniMips.vhd"/>
       <outfile xil_pn:name="MiniMips_BRAM.vhd"/>
@@ -260,23 +260,17 @@
       <outfile xil_pn:name="test_ShiftRegister2.vhd"/>
       <outfile xil_pn:name="test_minimips.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1400753417" xil_pn:in_ck="-4349133546102776041" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7371037429851707342" xil_pn:start_ts="1400753407">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1401260699" xil_pn:in_ck="2902933047026613118" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2260164173907020632" xil_pn:start_ts="1401260698">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_DCM_beh.prj"/>
-      <outfile xil_pn:name="test_DCM_isim_beh.exe"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
     <transform xil_pn:end_ts="1400753417" xil_pn:in_ck="2249207714678909492" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8965782715184571359" xil_pn:start_ts="1400753417">
-      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="test_DCM_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1400578110" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1400578110">

@@ -193,6 +193,14 @@ architecture Structural of MiniMips_BRAM is
     Port ( hex_i : in  STD_LOGIC_VECTOR (3 downto 0);       -- number to be displayed
            leds_n_o : out  STD_LOGIC_VECTOR (6 downto 0));  -- activation of the proper leds
 	end component;
+	
+	component MemToLED is
+    Port ( Mem_in : in  STD_LOGIC_VECTOR (7 downto 0);
+           address : in  STD_LOGIC_VECTOR (7 downto 0);
+           Port0 : out  STD_LOGIC_VECTOR (7 downto 0);
+           Port1 : out  STD_LOGIC_VECTOR (7 downto 0);
+           Port2 : out  STD_LOGIC_VECTOR (7 downto 0));
+	end component;
 
 	signal auxPCWriteCond : std_logic;
 	signal auxPCWrite     : std_logic;
@@ -274,6 +282,15 @@ begin
 				b_i => auxALUout,
 				mux_sel_i => auxIorD,
 				c_o => auxMUX1out
+	);
+	
+	inst_MemToLED : MemToLED
+	port map(
+				Mem_in => auxBout,
+            address  => auxMux1out,
+            Port0  => auxPort0,
+            Port1  => auxPort1,
+            Port2  => auxPort2
 	);
 	
 	inst_memory : memory_BRAM
